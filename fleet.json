@@ -1,0 +1,2411 @@
+{
+  "title": "Data Armada Anantalia Trans",
+  "isDummy": true,
+  "notice": "SELURUH data dalam file ini adalah data dummy untuk pengembangan UI/prototipe. Nama kendaraan mengikuti daftar yang diberikan; kategori, spesifikasi, tarif, fasilitas, dan status ketersediaan merupakan contoh dan wajib diverifikasi sebelum digunakan secara publik. Kategori bus/minibus menggunakan Mercedes-Benz sebagai contoh visual/model dummy; konfigurasi dan kapasitas bukan data unit aktual.",
+  "currency": "IDR",
+  "fleet": [
+    {
+      "id": "fleet-01-toyota-calya",
+      "name": "Toyota Calya",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "Toyota Calya ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Listrik (sesuai tipe)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Calya+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Calya mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-02-toyota-grand-new-avanza",
+      "name": "Toyota Grand New Avanza",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Toyota Grand New Avanza ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Grand+New+Avanza+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Grand New Avanza mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-03-daihatsu-sigra",
+      "name": "Daihatsu Sigra",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "Daihatsu Sigra ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Listrik (sesuai tipe)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+Sigra+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Daihatsu Sigra mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-04-daihatsu-new-sigra",
+      "name": "Daihatsu New Sigra",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "Daihatsu New Sigra ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Listrik (sesuai tipe)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+New+Sigra+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Daihatsu New Sigra mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-05-toyota-new-calya",
+      "name": "Toyota New Calya",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "Toyota New Calya ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Listrik (sesuai tipe)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+New+Calya+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota New Calya mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-06-toyota-agya",
+      "name": "Toyota Agya",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "Toyota Agya ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Listrik (sesuai tipe)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Agya+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Agya mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-07-toyota-new-avanza-2019",
+      "name": "Toyota New Avanza 2019",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Toyota New Avanza 2019 ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+New+Avanza+2019+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota New Avanza 2019 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-08-daihatsu-all-new-xenia-2022",
+      "name": "Daihatsu All New Xenia 2022",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Daihatsu All New Xenia 2022 ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+All+New+Xenia+2022+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Daihatsu All New Xenia 2022 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-09-toyota-all-new-avanza-2022",
+      "name": "Toyota All New Avanza 2022",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Toyota All New Avanza 2022 ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Avanza+2022+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota All New Avanza 2022 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-10-daihatsu-ayla",
+      "name": "Daihatsu Ayla",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "Daihatsu Ayla ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Listrik (sesuai tipe)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+Ayla+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Daihatsu Ayla mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-11-daihatsu-new-xenia",
+      "name": "Daihatsu New Xenia",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Daihatsu New Xenia ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+New+Xenia+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Daihatsu New Xenia mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-12-daihatsu-grand-new-xenia",
+      "name": "Daihatsu Grand New Xenia",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Daihatsu Grand New Xenia ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+Grand+New+Xenia+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Daihatsu Grand New Xenia mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-13-suzuki-ertiga",
+      "name": "Suzuki Ertiga",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Suzuki Ertiga ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Suzuki+Ertiga+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Suzuki Ertiga mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-14-daihatsu-xenia",
+      "name": "Daihatsu Xenia",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Daihatsu Xenia ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+Xenia+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Daihatsu Xenia mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-15-mitsubishi-xpander",
+      "name": "Mitsubishi Xpander",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Mitsubishi Xpander ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mitsubishi+Xpander+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Mitsubishi Xpander mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-16-suzuki-all-new-ertiga",
+      "name": "Suzuki All New Ertiga",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Suzuki All New Ertiga ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Suzuki+All+New+Ertiga+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Suzuki All New Ertiga mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-17-toyota-all-new-rush",
+      "name": "Toyota All New Rush",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Toyota All New Rush ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Rush+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota All New Rush mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-18-daihatsu-all-new-terios",
+      "name": "Daihatsu All New Terios",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Daihatsu All New Terios ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+All+New+Terios+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Daihatsu All New Terios mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-19-wuling-confero-s",
+      "name": "Wuling Confero S",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Wuling Confero S ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Wuling+Confero+S+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Wuling Confero S mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-20-honda-mobilio",
+      "name": "Honda Mobilio",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Honda Mobilio ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Honda+Mobilio+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Honda Mobilio mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-21-mitsubishi-xpander-facelift-2021",
+      "name": "Mitsubishi Xpander Facelift 2021",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Mitsubishi Xpander Facelift 2021 ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mitsubishi+Xpander+Facelift+2021+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Mitsubishi Xpander Facelift 2021 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-22-nissan-all-new-livina",
+      "name": "Nissan All New Livina",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Nissan All New Livina ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Nissan+All+New+Livina+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Nissan All New Livina mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-23-suzuki-xl7",
+      "name": "Suzuki XL7",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Suzuki XL7 ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Suzuki+XL7+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Suzuki XL7 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-24-hyundai-stargazer",
+      "name": "Hyundai Stargazer",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Hyundai Stargazer ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Hyundai+Stargazer+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Hyundai Stargazer mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-25-mitsubishi-xpander-cross",
+      "name": "Mitsubishi Xpander Cross",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Mitsubishi Xpander Cross ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mitsubishi+Xpander+Cross+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Mitsubishi Xpander Cross mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-26-toyota-innova-reborn",
+      "name": "Toyota Innova Reborn",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Toyota Innova Reborn ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Innova+Reborn+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Innova Reborn mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-27-toyota-new-innova-reborn-facelift",
+      "name": "Toyota New Innova Reborn Facelift",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Toyota New Innova Reborn Facelift ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+New+Innova+Reborn+Facelift+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota New Innova Reborn Facelift mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-28-toyota-grand-new-innova",
+      "name": "Toyota Grand New Innova",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Toyota Grand New Innova ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Grand+New+Innova+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Grand New Innova mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-29-toyota-raize",
+      "name": "Toyota Raize",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "Toyota Raize ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Listrik (sesuai tipe)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Raize+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Raize mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-30-wuling-binguo-ev",
+      "name": "Wuling Binguo EV",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "Wuling Binguo EV ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Listrik (data dummy)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Wuling+Binguo+EV+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Wuling Binguo EV mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-31-wuling-cloud-ev",
+      "name": "Wuling Cloud EV",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Wuling Cloud EV ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Listrik (data dummy)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Wuling+Cloud+EV+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Wuling Cloud EV mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-32-toyota-all-new-innova-zenix",
+      "name": "Toyota All New Innova Zenix",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Toyota All New Innova Zenix ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Innova+Zenix+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota All New Innova Zenix mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-33-byd-m6",
+      "name": "BYD M6",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "BYD M6 ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=BYD+M6+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "BYD M6 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-34-toyota-all-new-innova-zenix-hybrid",
+      "name": "Toyota All New Innova Zenix Hybrid",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Toyota All New Innova Zenix Hybrid ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Innova+Zenix+Hybrid+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota All New Innova Zenix Hybrid mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-35-toyota-fortuner-2019",
+      "name": "Toyota Fortuner 2019",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota Fortuner 2019 ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Fortuner+2019+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Fortuner 2019 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-36-toyota-new-fortuner-vrz",
+      "name": "Toyota New Fortuner VRZ",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota New Fortuner VRZ ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+New+Fortuner+VRZ+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota New Fortuner VRZ mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-37-hyundai-h1",
+      "name": "Hyundai H1",
+      "entryType": "vehicle-model",
+      "category": "Minibus",
+      "description": "Hyundai H1 ditampilkan sebagai contoh armada kategori minibus untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga besar, rombongan, atau antar-jemput.",
+      "capacity": "8–15 Kursi",
+      "transmission": "Manual / Otomatis (sesuai unit)",
+      "fuel": "Diesel / Bensin (sesuai unit)",
+      "features": [
+        "AC kabin",
+        "Kursi sesuai konfigurasi unit",
+        "Ruang bagasi sesuai unit"
+      ],
+      "cityTariff": "Rp900.000–Rp1.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.300.000–Rp2.000.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Hyundai+H1+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Hyundai H1 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-38-toyota-hiace-premio",
+      "name": "Toyota Hiace Premio",
+      "entryType": "vehicle-model",
+      "category": "Minibus",
+      "description": "Toyota Hiace Premio ditampilkan sebagai contoh armada kategori minibus untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga besar, rombongan, atau antar-jemput.",
+      "capacity": "8–15 Kursi",
+      "transmission": "Manual / Otomatis (sesuai unit)",
+      "fuel": "Diesel / Bensin (sesuai unit)",
+      "features": [
+        "AC kabin",
+        "Kursi sesuai konfigurasi unit",
+        "Ruang bagasi sesuai unit"
+      ],
+      "cityTariff": "Rp900.000–Rp1.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.300.000–Rp2.000.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Hiace+Premio+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Hiace Premio mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-39-toyota-grand-new-fortuner",
+      "name": "Toyota Grand New Fortuner",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota Grand New Fortuner ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Grand+New+Fortuner+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Grand New Fortuner mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-40-mitsubishi-all-new-pajero",
+      "name": "Mitsubishi All New Pajero",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Mitsubishi All New Pajero ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mitsubishi+All+New+Pajero+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Mitsubishi All New Pajero mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-41-toyota-new-fortuner-gr-2023",
+      "name": "Toyota New Fortuner GR 2023",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota New Fortuner GR 2023 ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+New+Fortuner+GR+2023+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota New Fortuner GR 2023 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-42-toyota-all-new-camry",
+      "name": "Toyota All New Camry",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota All New Camry ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Camry+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota All New Camry mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-43-byd-denza-d9",
+      "name": "BYD Denza D9",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "BYD Denza D9 ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=BYD+Denza+D9+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "BYD Denza D9 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-44-toyota-all-new-alphard",
+      "name": "Toyota All New Alphard",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota All New Alphard ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Alphard+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota All New Alphard mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-45-toyota-hiace-premio-luxury",
+      "name": "Toyota Hiace Premio Luxury",
+      "entryType": "vehicle-model",
+      "category": "Minibus",
+      "description": "Toyota Hiace Premio Luxury ditampilkan sebagai contoh armada kategori minibus untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga besar, rombongan, atau antar-jemput.",
+      "capacity": "8–15 Kursi",
+      "transmission": "Manual / Otomatis (sesuai unit)",
+      "fuel": "Diesel / Bensin (sesuai unit)",
+      "features": [
+        "AC kabin",
+        "Kursi sesuai konfigurasi unit",
+        "Ruang bagasi sesuai unit"
+      ],
+      "cityTariff": "Rp900.000–Rp1.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.300.000–Rp2.000.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Hiace+Premio+Luxury+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Hiace Premio Luxury mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-46-toyota-new-alphard-2024-hybrid",
+      "name": "Toyota New Alphard 2024 Hybrid",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota New Alphard 2024 Hybrid ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+New+Alphard+2024+Hybrid+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota New Alphard 2024 Hybrid mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-47-toyota-hiace-commuter",
+      "name": "Toyota Hiace Commuter",
+      "entryType": "vehicle-model",
+      "category": "Minibus",
+      "description": "Toyota Hiace Commuter ditampilkan sebagai contoh armada kategori minibus untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga besar, rombongan, atau antar-jemput.",
+      "capacity": "8–15 Kursi",
+      "transmission": "Manual / Otomatis (sesuai unit)",
+      "fuel": "Diesel / Bensin (sesuai unit)",
+      "features": [
+        "AC kabin",
+        "Kursi sesuai konfigurasi unit",
+        "Ruang bagasi sesuai unit"
+      ],
+      "cityTariff": "Rp900.000–Rp1.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.300.000–Rp2.000.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Hiace+Commuter+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Hiace Commuter mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-48-toyota-all-new-alphard-transformer",
+      "name": "Toyota All New Alphard Transformer",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota All New Alphard Transformer ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Alphard+Transformer+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota All New Alphard Transformer mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-49-toyota-all-new-alphard-transformer-2022",
+      "name": "Toyota All New Alphard Transformer 2022",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota All New Alphard Transformer 2022 ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Alphard+Transformer+2022+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota All New Alphard Transformer 2022 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-50-wuling-confero-db",
+      "name": "Wuling Confero DB",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Wuling Confero DB ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Wuling+Confero+DB+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Wuling Confero DB mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-51-chevrolet-spin",
+      "name": "Chevrolet Spin",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Chevrolet Spin ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Chevrolet+Spin+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Chevrolet Spin mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-52-byd-atto-1",
+      "name": "BYD Atto 1",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "BYD Atto 1 ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Listrik (data dummy)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=BYD+Atto+1+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "BYD Atto 1 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-53-toyota-all-new-veloz-2021",
+      "name": "Toyota All New Veloz 2021",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Toyota All New Veloz 2021 ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Veloz+2021+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota All New Veloz 2021 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-54-toyota-veloz-2022",
+      "name": "Toyota Veloz 2022",
+      "entryType": "vehicle-model",
+      "category": "MPV Standar",
+      "description": "Toyota Veloz 2022 ditampilkan sebagai contoh armada kategori mpv standar untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan operasional harian.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin",
+      "features": [
+        "AC",
+        "Kabin keluarga",
+        "Bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp450.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp600.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Veloz+2022+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Veloz 2022 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-55-vinfast-e34",
+      "name": "VinFast E34",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "VinFast E34 ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Listrik (data dummy)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=VinFast+E34+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "VinFast E34 mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-56-aletra-l8-ev",
+      "name": "Aletra L8 EV",
+      "entryType": "vehicle-model",
+      "category": "City Car / EV",
+      "description": "Aletra L8 EV ditampilkan sebagai contoh armada kategori city car / ev untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan dalam kota dan mobilitas harian.",
+      "capacity": "4–5 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Listrik (data dummy)",
+      "features": [
+        "AC",
+        "Kabin ringkas",
+        "Fitur mengikuti tipe unit"
+      ],
+      "cityTariff": "Rp350.000–Rp650.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp500.000–Rp850.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Aletra+L8+EV+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Aletra L8 EV mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-57-toyota-voxy",
+      "name": "Toyota Voxy",
+      "entryType": "vehicle-model",
+      "category": "MPV Keluarga",
+      "description": "Toyota Voxy ditampilkan sebagai contoh armada kategori mpv keluarga untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan keluarga dan kebutuhan operasional.",
+      "capacity": "6–7 Kursi",
+      "transmission": "Manual / Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid / Listrik (sesuai tipe)",
+      "features": [
+        "Kabin keluarga",
+        "AC",
+        "Ruang bagasi sesuai konfigurasi"
+      ],
+      "cityTariff": "Rp550.000–Rp900.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp750.000–Rp1.200.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Voxy+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota Voxy mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-58-mitsubishi-new-pajero-dakar",
+      "name": "Mitsubishi New Pajero Dakar",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Mitsubishi New Pajero Dakar ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mitsubishi+New+Pajero+Dakar+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Mitsubishi New Pajero Dakar mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-59-toyota-new-vellfire",
+      "name": "Toyota New Vellfire",
+      "entryType": "vehicle-model",
+      "category": "Premium",
+      "description": "Toyota New Vellfire ditampilkan sebagai contoh armada kategori premium untuk simulasi katalog Anantalia Trans.",
+      "useCase": "Contoh layanan perjalanan bisnis, keluarga, atau acara khusus.",
+      "capacity": "4–7 Kursi",
+      "transmission": "Otomatis (sesuai tipe)",
+      "fuel": "Bensin / Hybrid (sesuai tipe)",
+      "features": [
+        "Kabin premium",
+        "AC",
+        "Fitur kenyamanan mengikuti tipe kendaraan"
+      ],
+      "cityTariff": "Rp1.200.000–Rp2.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.800.000–Rp3.500.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+New+Vellfire+mobil+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Toyota New Vellfire mobil Indonesia foto eksterior",
+        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+      },
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+    },
+    {
+      "id": "fleet-60-isuzu-elf-long-19-seat",
+      "name": "Isuzu ELF Long 19 Seat",
+      "entryType": "vehicle-model",
+      "category": "Minibus",
+      "description": "Contoh kendaraan minibus dengan referensi Mercedes-Benz Sprinter untuk simulasi katalog. Kapasitas 19 kursi perlu diverifikasi terhadap konfigurasi unit.",
+      "useCase": "Contoh layanan perjalanan keluarga besar, rombongan, atau antar-jemput.",
+      "capacity": "19 Kursi",
+      "transmission": "Manual / Otomatis (sesuai unit)",
+      "fuel": "Diesel / Bensin (sesuai unit)",
+      "features": [
+        "AC kabin",
+        "Kursi sesuai konfigurasi unit",
+        "Ruang bagasi sesuai unit"
+      ],
+      "cityTariff": "Rp900.000–Rp1.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.300.000–Rp2.000.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mercedes-Benz+Sprinter+19+seat+minibus+Indonesia+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Mercedes-Benz Sprinter 19 seat minibus Indonesia eksterior",
+        "note": "Pilih foto Mercedes-Benz Sprinter yang sesuai dan periksa izin penggunaannya."
+      },
+      "imageNote": "Placeholder lokal; buka imageSearchUrl untuk mencari foto Mercedes-Benz yang sesuai.",
+      "vehicleExample": "Mercedes-Benz Sprinter Minibus"
+    },
+    {
+      "id": "fleet-61-kendaraan-kapasitas-10-20-seat",
+      "name": "Mercedes-Benz Sprinter Minibus",
+      "entryType": "vehicle-model",
+      "category": "Minibus",
+      "description": "Mercedes-Benz Sprinter Minibus ditampilkan sebagai contoh armada bus Mercedes-Benz untuk simulasi katalog Anantalia Trans. Spesifikasi dan konfigurasi unit merupakan data dummy.",
+      "useCase": "Contoh layanan perjalanan keluarga besar, rombongan, atau antar-jemput.",
+      "capacity": "10–20 Kursi",
+      "transmission": "Manual / Otomatis (sesuai unit)",
+      "fuel": "Diesel / Bensin (sesuai unit)",
+      "features": [
+        "AC kabin",
+        "Kursi sesuai konfigurasi unit",
+        "Ruang bagasi sesuai unit"
+      ],
+      "cityTariff": "Rp900.000–Rp1.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp1.300.000–Rp2.000.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mercedes-Benz+Sprinter+Minibus+bus+pariwisata+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Mercedes-Benz Sprinter Minibus bus pariwisata Indonesia foto eksterior",
+        "note": "Pilih foto dari sumber yang sesuai dan periksa izin penggunaannya sebelum digunakan."
+      },
+      "imageNote": "Placeholder lokal; gunakan imageSearchUrl untuk mencari foto Mercedes-Benz yang sesuai.",
+      "vehicleExample": "Mercedes-Benz Sprinter Minibus"
+    },
+    {
+      "id": "fleet-62-kendaraan-kapasitas-25-35-seat",
+      "name": "Mercedes-Benz OF 917 Bus Medium",
+      "entryType": "vehicle-model",
+      "category": "Bus Medium",
+      "description": "Mercedes-Benz OF 917 Bus Medium ditampilkan sebagai contoh armada bus Mercedes-Benz untuk simulasi katalog Anantalia Trans. Spesifikasi dan konfigurasi unit merupakan data dummy.",
+      "useCase": "Contoh layanan perjalanan rombongan dan kegiatan perusahaan.",
+      "capacity": "25–35 Kursi (kategori dummy)",
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "features": [
+        "AC kabin",
+        "Kursi penumpang sesuai konfigurasi",
+        "Bagasi sesuai unit"
+      ],
+      "cityTariff": "Rp1.800.000–Rp2.700.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp2.700.000–Rp3.800.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mercedes-Benz+OF+917+Bus+Medium+bus+pariwisata+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Mercedes-Benz OF 917 Bus Medium bus pariwisata Indonesia foto eksterior",
+        "note": "Pilih foto dari sumber yang sesuai dan periksa izin penggunaannya sebelum digunakan."
+      },
+      "imageNote": "Placeholder lokal; gunakan imageSearchUrl untuk mencari foto Mercedes-Benz yang sesuai.",
+      "vehicleExample": "Mercedes-Benz OF 917 Bus Medium"
+    },
+    {
+      "id": "fleet-63-kendaraan-kapasitas-40-59-seat",
+      "name": "Mercedes-Benz OH 1626 Bus Besar",
+      "entryType": "vehicle-model",
+      "category": "Bus Besar",
+      "description": "Mercedes-Benz OH 1626 Bus Besar ditampilkan sebagai contoh armada bus Mercedes-Benz untuk simulasi katalog Anantalia Trans. Spesifikasi dan konfigurasi unit merupakan data dummy.",
+      "useCase": "Contoh layanan perjalanan rombongan besar dan kegiatan wisata.",
+      "capacity": "40–59 Kursi (kategori dummy)",
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "features": [
+        "AC kabin",
+        "Kursi penumpang sesuai konfigurasi",
+        "Kompartemen bagasi"
+      ],
+      "cityTariff": "Rp2.500.000–Rp3.500.000",
+      "cityTariffPackage": "Contoh tarif dalam kota (12 jam), belum termasuk konfirmasi driver/BBM.",
+      "outOfCityTariff": "Rp3.500.000–Rp5.000.000",
+      "outOfCityTariffPackage": "Contoh tarif luar kota; rute dan paket layanan hanya simulasi.",
+      "availability": "Contoh status: Siap Jalan (DUMMY — bukan ketersediaan aktual)",
+      "rentalTerms": [
+        "Contoh fasilitas: audio, USB charger, dan perlengkapan kabin (dummy).",
+        "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
+        "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
+      ],
+      "image": "../assets/placeholder-vehicle.svg",
+      "isDummy": true,
+      "verificationStatus": "dummy",
+      "source": "generated-demo-data",
+      "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mercedes-Benz+OH+1626+Bus+Besar+bus+pariwisata+Indonesia+foto+eksterior",
+      "imageSource": {
+        "provider": "Google Images",
+        "type": "search-link",
+        "query": "Mercedes-Benz OH 1626 Bus Besar bus pariwisata Indonesia foto eksterior",
+        "note": "Pilih foto dari sumber yang sesuai dan periksa izin penggunaannya sebelum digunakan."
+      },
+      "imageNote": "Placeholder lokal; gunakan imageSearchUrl untuk mencari foto Mercedes-Benz yang sesuai.",
+      "vehicleExample": "Mercedes-Benz OH 1626 Bus Besar"
+    }
+  ],
+  "imagePolicy": {
+    "provider": "Google Images",
+    "behavior": "Setiap armada memiliki imageSearchUrl untuk mencari gambar yang relevan. URL pencarian Google tidak dapat digunakan sebagai URL gambar langsung.",
+    "important": "Untuk menampilkan foto di kartu/modal, unduh atau gunakan URL file gambar langsung dari sumber yang mengizinkan penggunaan, lalu isi field image."
+  }
+}

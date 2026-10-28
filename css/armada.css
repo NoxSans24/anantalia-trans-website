@@ -1,0 +1,520 @@
+
+  @layer base {
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      overscroll-behavior: none;
+    }
+    main > :first-child {
+      margin-top: 0 !important;
+    }
+    main > :last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #bcc9c7;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f7f8f6;
+  }
+
+  /* Balanced Motion Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+    }
+    50% {
+      box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+    }
+  }
+
+  .motion-header-fade {
+    animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .motion-notice-fade {
+    animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
+    opacity: 0;
+  }
+  .motion-filter-fade {
+    animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards;
+    opacity: 0;
+  }
+
+  /* Card Reveal Baseline */
+  .fleet-item {
+    transition: opacity 0.38s cubic-bezier(0.2, 0, 0, 1), transform 0.38s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.35s ease;
+    will-change: transform, opacity;
+  }
+
+  .fleet-catalogue-card {
+    min-width: 0;
+    height: 100%;
+  }
+
+  .fleet-card-image-wrap {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #eaf6f4;
+  }
+
+  .fleet-card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .fleet-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.125rem;
+  }
+
+  .fleet-card-name {
+    min-height: 2.9em;
+    margin: 0;
+    color: #173332;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .fleet-card-price-block {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: .75rem .875rem;
+    border: 1px solid rgba(7, 159, 154, .12);
+    border-radius: .75rem;
+    background: #eaf6f4;
+  }
+
+  .fleet-card-price-label {
+    color: #526765;
+    font-size: .75rem;
+    font-weight: 600;
+  }
+
+  .fleet-card-price {
+    color: #006764;
+    font-size: .875rem;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .fleet-catalogue-card .toggle-detail-btn {
+    display: inline-flex;
+    min-height: 2.75rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: auto;
+    border: 1px solid rgba(0, 103, 100, .2);
+    border-radius: .625rem;
+    background: #fff;
+    color: #006764;
+    font: 700 .875rem/1.25 Manrope, sans-serif;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease, transform .15s ease;
+  }
+
+  .fleet-catalogue-card .toggle-detail-btn:hover {
+    border-color: #079f9a;
+    background: #eaf6f4;
+    color: #006764;
+  }
+
+  .fleet-catalogue-card .toggle-detail-btn:active {
+    transform: scale(.98);
+  }
+
+  .fleet-catalogue-card .toggle-detail-btn:focus-visible {
+    outline: 3px solid rgba(7, 159, 154, .3);
+    outline-offset: 2px;
+  }
+
+  .fleet-item.card-hidden {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  .fleet-item.card-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fleet-item:hover {
+    transform: translateY(-6px);
+  }
+
+  /* Accordion Transition Container */
+  .accordion-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-bottom 0.3s ease;
+  }
+
+  .accordion-content.is-open {
+    max-height: 280px;
+    opacity: 1;
+    margin-bottom: 1rem;
+  }
+
+  .whatsapp-fab-pulse {
+    animation: pulseGlow 2.5s infinite ease-in-out;
+  }
+
+  /* Accessible Prefers-Reduced-Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .fleet-item:hover {
+      transform: none !important;
+    }
+    .accordion-content {
+      transition: none !important;
+    }
+    .whatsapp-fab-pulse {
+      animation: none !important;
+    }
+  }
+
+/* Shared vehicle detail dialog */
+.vehicle-detail-modal {
+  width: 92vw;
+  height: 92vh;
+  max-width: 1400px;
+  max-height: 900px;
+  padding: 0;
+  border: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  color: #02201f;
+  box-shadow: 0 24px 80px rgba(2, 32, 31, 0.28);
+}
+.vehicle-detail-modal::backdrop {
+  background: rgba(2, 32, 31, 0.58);
+  backdrop-filter: blur(3px);
+}
+.vehicle-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  height: 100%;
+  min-height: 0;
+}
+.vehicle-detail-photo {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: #e3fffd;
+}
+.vehicle-detail-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vehicle-detail-photo img[hidden],
+.vehicle-photo-placeholder[hidden] {
+  display: none !important;
+}
+.vehicle-photo-placeholder {
+  display: flex;
+  height: 100%;
+  min-height: 240px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #526765;
+  font: 600 0.95rem/1.4 Manrope, sans-serif;
+  background: linear-gradient(145deg, #eaf6f4, #f7f8f6);
+}
+.vehicle-photo-placeholder .material-symbols-outlined {
+  color: #079f9a;
+  font-size: 3rem;
+}
+.vehicle-detail-content {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+.vehicle-detail-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.vehicle-detail-heading h2 {
+  margin-top: 0.65rem;
+  padding-right: 0.5rem;
+}
+.vehicle-detail-description {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  border-left: 3px solid #079f9a;
+  border-radius: .75rem;
+  background: #eaf6f4;
+  padding: .875rem 1rem;
+}
+.vehicle-detail-description > .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: #006764;
+  font-size: 1.2rem;
+  margin-top: .1rem;
+}
+.vehicle-detail-description p {
+  min-width: 0;
+  margin: 0;
+}
+.vehicle-data-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid #f3d38a;
+  border-radius: 999px;
+  background: #fff7df;
+  color: #76500a;
+  padding: 0.35rem 0.65rem;
+  font: 700 0.72rem/1.2 Manrope, sans-serif;
+}
+.vehicle-data-status .material-symbols-outlined {
+  font-size: 1rem;
+}
+.vehicle-modal-close,
+.vehicle-modal-secondary {
+  display: inline-flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dce5e2;
+  border-radius: 0.75rem;
+  background: #f7f8f6;
+  color: #173332;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.vehicle-modal-close:hover,
+.vehicle-modal-secondary:hover {
+  border-color: #079f9a;
+  background: #eaf6f4;
+  color: #006764;
+}
+.vehicle-specs-block {
+  display: grid;
+  gap: 0.5rem;
+  border: 1px solid #dce5e2;
+  border-radius: 1rem;
+  background: #f7f8f6;
+  padding: 1rem;
+}
+.vehicle-detail-specs {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.vehicle-detail-specs li {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(7rem, max-content) minmax(0, 1fr);
+  align-items: start;
+  gap: .5rem;
+}
+.vehicle-detail-spec-icon {
+  color: #07827e;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+.vehicle-detail-spec-label {
+  color: #526765;
+  font-size: .8125rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.vehicle-detail-spec-value {
+  min-width: 0;
+  color: #173332;
+  font-size: .8125rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.vehicle-reference-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1rem;
+  margin-top: .5rem;
+}
+.vehicle-reference-links[hidden] {
+  display: none;
+}
+.vehicle-reference-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  color: #006764;
+  font: 700 .8125rem/1.4 Manrope, sans-serif;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.vehicle-reference-links a .material-symbols-outlined {
+  font-size: 1rem;
+  text-decoration: none;
+}
+.vehicle-reference-links a:focus-visible {
+  outline: 3px solid rgba(7, 159, 154, .3);
+  outline-offset: 3px;
+}
+.vehicle-detail-actions {
+  position: sticky;
+  bottom: calc(-1 * clamp(1.25rem, 3vw, 2.5rem));
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: auto;
+  margin-right: calc(-1 * clamp(1.25rem, 3vw, 2.5rem));
+  margin-left: calc(-1 * clamp(1.25rem, 3vw, 2.5rem));
+  border-top: 1px solid #dce5e2;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 1rem clamp(1.25rem, 3vw, 2.5rem);
+}
+.vehicle-modal-secondary,
+.vehicle-modal-whatsapp {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.65rem 1rem;
+  font: 700 0.9rem/1.2 Manrope, sans-serif;
+  text-decoration: none;
+}
+.vehicle-modal-whatsapp {
+  background: #128c48;
+  color: #fff;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+.vehicle-modal-whatsapp:hover {
+  background: #0d7837;
+  transform: translateY(-1px);
+}
+.vehicle-modal-whatsapp:focus-visible,
+.vehicle-modal-close:focus-visible,
+.vehicle-modal-secondary:focus-visible {
+  outline: 3px solid #079f9a;
+  outline-offset: 2px;
+}
+@media (max-width: 767px) {
+  .vehicle-detail-specs li {
+    grid-template-columns: 1.25rem minmax(0, 1fr);
+    grid-template-areas: "icon label" ". value";
+  }
+  .vehicle-detail-spec-icon { grid-area: icon; }
+  .vehicle-detail-spec-label { grid-area: label; }
+  .vehicle-detail-spec-value { grid-area: value; }
+  .vehicle-detail-modal {
+    width: 96vw;
+    height: 94vh;
+    height: 94dvh;
+    max-height: 94dvh;
+    border-radius: 18px;
+  }
+  .vehicle-detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(190px, 34%) minmax(0, 1fr);
+  }
+  .vehicle-detail-content {
+    gap: 0.9rem;
+    padding: 1rem;
+  }
+  .vehicle-detail-heading h2 {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+  .vehicle-detail-actions {
+    bottom: -1rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    padding: 0.75rem 1rem;
+  }
+  .vehicle-modal-whatsapp {
+    flex: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vehicle-detail-modal *,
+  .vehicle-detail-modal *::before,
+  .vehicle-detail-modal *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .vehicle-modal-whatsapp:hover {
+    transform: none;
+  }
+}
+
+@keyframes vehicleModalIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes vehicleModalOut {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(6px) scale(0.99); }
+}
+@keyframes vehicleBackdropIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.vehicle-detail-modal[open] {
+  animation: vehicleModalIn 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.vehicle-detail-modal[open]::backdrop {
+  animation: vehicleBackdropIn 180ms ease-out both;
+}
+.vehicle-detail-modal[open].is-closing {
+  animation: vehicleModalOut 160ms ease-in both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vehicle-detail-modal[open],
+  .vehicle-detail-modal[open]::backdrop,
+  .vehicle-detail-modal[open].is-closing {
+    animation-duration: 0.01ms !important;
+  }
+}

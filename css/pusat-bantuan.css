@@ -1,0 +1,399 @@
+@layer base {
+  html, body { margin:0; padding:0; }
+  body { overscroll-behavior:none; }
+  main > :first-child { margin-top:0!important; }
+  main > :last-child { margin-bottom:0!important; }
+}
+
+/* Unified Motion Design System Tokens */
+:root {
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-micro: 150ms;
+  --duration-component: 200ms;
+  --duration-panel: 280ms;
+  --duration-entrance: 380ms;
+}
+
+/* Micro-interactions & Buttons */
+.motion-btn {
+  transition: transform var(--duration-component) var(--ease-spring),
+              box-shadow var(--duration-component) var(--ease-spring),
+              background-color var(--duration-micro) var(--ease-spring),
+              color var(--duration-micro) var(--ease-spring),
+              border-color var(--duration-micro) var(--ease-spring);
+  will-change: transform;
+}
+.motion-btn:hover {
+  transform: translateY(-2px);
+}
+.motion-btn:active {
+  transform: translateY(0);
+}
+
+.motion-chip {
+  transition: transform var(--duration-micro) var(--ease-spring),
+              background-color var(--duration-micro) var(--ease-spring),
+              color var(--duration-micro) var(--ease-spring),
+              box-shadow var(--duration-micro) var(--ease-spring);
+  will-change: transform;
+}
+.motion-chip:hover {
+  transform: translateY(-1.5px);
+}
+.motion-chip:active {
+  transform: translateY(0);
+}
+
+/* Card Hover Lift */
+.motion-card {
+  transition: transform var(--duration-panel) var(--ease-spring),
+              box-shadow var(--duration-panel) var(--ease-spring),
+              border-color var(--duration-panel) var(--ease-spring);
+  will-change: transform, box-shadow;
+}
+.motion-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(0, 103, 100, 0.08), 0 8px 10px -6px rgba(0, 103, 100, 0.04);
+}
+
+/* Accordion Smooth Transitions */
+.faq-content {
+  transition: max-height var(--duration-panel) var(--ease-spring),
+              opacity var(--duration-panel) var(--ease-spring),
+              padding var(--duration-panel) var(--ease-spring);
+  will-change: max-height, opacity;
+}
+.faq-icon {
+  transition: transform var(--duration-component) var(--ease-spring),
+              background-color var(--duration-micro) var(--ease-spring);
+  will-change: transform;
+}
+
+/* Map Markers Smooth Transitions */
+.indonesia-map {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 65 / 28;
+  isolation: isolate;
+}
+.indonesia-map-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.indonesia-map-zoom-layer {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.map-zoom-controls {
+  position: absolute;
+  z-index: 45;
+  top: .75rem;
+  right: .75rem;
+  display: flex;
+  gap: .25rem;
+  padding: .25rem;
+  border: 1px solid rgba(0, 103, 100, .14);
+  border-radius: .875rem;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 3px 12px rgba(23, 51, 50, .12);
+  backdrop-filter: blur(8px);
+}
+.map-zoom-button {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: .625rem;
+  background: transparent;
+  color: #006764;
+  cursor: pointer;
+  transition: color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+.map-zoom-button:hover:not(:disabled) {
+  background: #eaf6f4;
+  color: #079f9a;
+}
+.map-zoom-button:active:not(:disabled) {
+  transform: scale(.94);
+}
+.map-zoom-button:focus-visible {
+  outline: 2px solid #079f9a;
+  outline-offset: 1px;
+}
+.map-zoom-button:disabled {
+  color: #9aa9a6;
+  cursor: default;
+}
+.indonesia-map.is-zoomed {
+  cursor: grab;
+  touch-action: none;
+}
+.indonesia-map.is-dragging {
+  cursor: grabbing;
+}
+.indonesia-map.is-dragging .indonesia-map-zoom-layer {
+  transition: none;
+}
+.city-marker {
+  z-index: 2;
+  transition: transform var(--duration-micro) var(--ease-spring),
+              filter var(--duration-micro) var(--ease-spring),
+              z-index var(--duration-micro) var(--ease-spring);
+  will-change: transform;
+}
+.city-marker:not(.active) > div:first-child {
+  width: 10px !important;
+  height: 10px !important;
+  background: #079f9a !important;
+  box-shadow: 0 0 0 2px #eaf6f4, 0 0 0 3px rgba(7, 159, 154, .28), 0 2px 4px rgba(23, 51, 50, .18) !important;
+}
+.city-marker:not(.active) > div:first-child > div {
+  width: 4px !important;
+  height: 4px !important;
+}
+.city-marker.active > div:first-child > div {
+  width: 19px !important;
+  height: 19px !important;
+  background: #079f9a !important;
+  box-shadow: 0 0 0 2px #80f5ef, 0 2px 6px rgba(23, 51, 50, .25) !important;
+}
+.city-marker:hover {
+  transform: translate(-50%, -50%) scale(1.18);
+  z-index: 40;
+}
+.city-marker.active {
+  transform: translate(-50%, -50%) scale(1.12);
+  z-index: 35;
+}
+.city-marker[hidden] {
+  display: none !important;
+}
+@media (max-width: 520px) {
+  .city-marker > span {
+    max-width: 8rem;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* City List Items */
+.city-list-item {
+  transition: background-color var(--duration-micro) var(--ease-spring),
+              border-color var(--duration-micro) var(--ease-spring),
+              transform var(--duration-micro) var(--ease-spring);
+}
+.city-list-item:hover {
+  transform: translateX(3px);
+}
+
+/* Search Focus without layout shift */
+.motion-input {
+  transition: border-color var(--duration-micro) var(--ease-spring),
+              box-shadow var(--duration-micro) var(--ease-spring),
+              background-color var(--duration-micro) var(--ease-spring);
+}
+
+/* Scroll Entrance Reveals */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--duration-entrance) var(--ease-spring),
+              transform var(--duration-entrance) var(--ease-spring);
+  will-change: opacity, transform;
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating WhatsApp Pulse */
+.floating-wa {
+  transition: transform var(--duration-component) var(--ease-spring),
+              box-shadow var(--duration-component) var(--ease-spring);
+}
+.floating-wa:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(37, 211, 102, 0.45);
+}
+.floating-wa:active {
+  transform: scale(0.96) translateY(0);
+}
+
+/* Accessibility: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+.selected-city-modal {
+  opacity: 0;
+  transition: opacity 220ms ease-out;
+}
+.selected-city-modal.is-open {
+  opacity: 1;
+}
+#selected-city-card {
+  opacity: 0;
+  transform: translateY(12px) scale(0.985);
+  transition: opacity 220ms ease-out, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.selected-city-modal.is-open #selected-city-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .selected-city-modal,
+  .selected-city-dialog {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* Location detail: readable information beside an interactive Google map. */
+#selected-city-card {
+  box-sizing: border-box;
+  width: min(96vw, 1400px);
+  height: min(90vh, 900px);
+  height: min(90dvh, 900px);
+  min-height: 0;
+  max-height: 94vh;
+  max-height: 94dvh;
+  overflow: hidden;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  background: #fff;
+}
+.selected-city-layout {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(17rem, 0.85fr) minmax(0, 1.15fr);
+  align-items: stretch;
+  gap: clamp(1rem, 2vw, 2rem);
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding-right: 3.5rem;
+}
+.selected-city-details {
+  min-width: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.selected-city-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+#detail-city-name {
+  overflow-wrap: anywhere;
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  line-height: 1.2;
+}
+#detail-status-badge {
+  max-width: 100%;
+  white-space: normal;
+}
+.selected-city-map {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  gap: 0.75rem;
+}
+.selected-city-map-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.selected-city-map-heading h4 {
+  margin: 0;
+  color: #173332;
+  font: 700 1rem/1.35 Manrope, sans-serif;
+}
+.selected-city-map-heading p {
+  margin: 0.2rem 0 0;
+  color: #526765;
+  font: 400 0.75rem/1.4 Manrope, sans-serif;
+}
+.selected-city-map-link {
+  flex: 0 0 auto;
+  color: #006764;
+  font: 700 0.8125rem/1.35 Manrope, sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.selected-city-map-link:focus-visible {
+  outline: 3px solid #006764;
+  outline-offset: 3px;
+}
+.selected-city-map-frame {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #dce5e2;
+  border-radius: 0.875rem;
+  background: #eaf6f4;
+}
+@media (max-width: 767px) {
+  .selected-city-modal {
+    align-items: flex-start;
+    padding: 0.5rem;
+  }
+  #selected-city-card {
+    width: calc(100vw - 1rem);
+    height: 94vh;
+    height: 94dvh;
+    max-height: 94vh;
+    max-height: 94dvh;
+    min-height: 0;
+    margin: auto 0;
+    overflow-y: auto;
+    border-radius: 1.125rem;
+    padding: 1rem;
+  }
+  #selected-city-card > div {
+    padding: 3.25rem 0 0 !important;
+  }
+  .selected-city-layout {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-right: 0 !important;
+  }
+  .selected-city-details {
+    overflow: visible;
+  }
+  .selected-city-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem !important;
+  }
+  #detail-city-name {
+    max-width: 100%;
+    font-size: clamp(1.5rem, 7vw, 1.875rem);
+    line-height: 1.2;
+  }
+  .selected-city-map-frame {
+    flex: none;
+    height: clamp(15rem, 38vh, 20rem);
+    min-height: 15rem;
+  }
+}

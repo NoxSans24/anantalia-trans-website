@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title description">
+  <title id="title">Foto armada belum tersedia</title>
+  <desc id="description">Ilustrasi kendaraan generik sebagai pengganti foto unit yang belum diberikan.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5F8F5"/>
+      <stop offset="1" stop-color="#EAF6F4"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#background)"/>
+  <circle cx="500" cy="74" r="118" fill="#A3B8A1" opacity=".14"/>
+  <path d="M143 255h22l24-65c7-18 22-29 41-29h159c20 0 35 9 47 25l39 51 40 13c15 5 24 18 24 33v25H143z" fill="#A3B8A1" opacity=".42"/>
+  <path d="m190 190-20 58h198v-72H230c-17 0-32 5-40 14Zm195-14v72h112l-35-47c-8-12-20-25-39-25z" fill="#fff" opacity=".86"/>
+  <path d="M143 255h22l24-65c7-18 22-29 41-29h159c20 0 35 9 47 25l39 51 40 13c15 5 24 18 24 33v25H143z" fill="none" stroke="#079F9A" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M165 255h352" stroke="#079F9A" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+  <circle cx="231" cy="303" r="28" fill="#F5F8F5" stroke="#079F9A" stroke-width="8"/>
+  <circle cx="454" cy="303" r="28" fill="#F5F8F5" stroke="#079F9A" stroke-width="8"/>
+  <path d="M320 343h-73m146 0h-43" stroke="#A3B8A1" stroke-width="7" stroke-linecap="round"/>
+  <text x="320" y="378" fill="#526765" font-family="Manrope, Arial, sans-serif" font-size="16" text-anchor="middle">Foto unit belum tersedia</text>
+</svg>

@@ -1,0 +1,221 @@
+.service-detail-modal {
+  width: 92vw;
+  height: 92vh;
+  max-width: 1400px;
+  max-height: 900px;
+  padding: 0;
+  border: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  color: #02201f;
+  box-shadow: 0 24px 80px rgba(2, 32, 31, 0.28);
+}
+.service-detail-modal::backdrop {
+  background: rgba(2, 32, 31, 0.58);
+  backdrop-filter: blur(3px);
+}
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  height: 100%;
+  min-height: 0;
+}
+.service-detail-photo {
+  min-height: 0;
+  overflow: hidden;
+  background: #e3fffd;
+}
+.service-detail-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-detail-photo img[hidden],
+.service-photo-placeholder[hidden] {
+  display: none !important;
+}
+.service-photo-placeholder {
+  display: flex;
+  height: 100%;
+  min-height: 240px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(145deg, #eaf6f4, #f7f8f6);
+  color: #526765;
+  font: 600 0.95rem/1.4 Manrope, sans-serif;
+}
+.service-photo-placeholder .material-symbols-outlined {
+  color: #079f9a;
+  font-size: 3rem;
+}
+.service-detail-content {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+.service-detail-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.service-detail-heading h2 {
+  margin: 0;
+  padding-right: 0.5rem;
+}
+.service-modal-close,
+.service-modal-secondary {
+  display: inline-flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dce5e2;
+  border-radius: 0.75rem;
+  background: #f7f8f6;
+  color: #173332;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.service-modal-close:hover,
+.service-modal-secondary:hover {
+  border-color: #079f9a;
+  background: #eaf6f4;
+  color: #006764;
+}
+.service-detail-extra {
+  display: grid;
+  gap: 0.6rem;
+  color: #526765;
+}
+.service-detail-features {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid #dce5e2;
+  border-radius: 1rem;
+  background: #f7f8f6;
+  list-style: none;
+}
+.service-detail-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.service-detail-actions {
+  position: sticky;
+  bottom: calc(-1 * clamp(1.25rem, 3vw, 2.5rem));
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: auto;
+  margin-right: calc(-1 * clamp(1.25rem, 3vw, 2.5rem));
+  margin-left: calc(-1 * clamp(1.25rem, 3vw, 2.5rem));
+  border-top: 1px solid #dce5e2;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 1rem clamp(1.25rem, 3vw, 2.5rem);
+}
+.service-modal-secondary,
+.service-modal-whatsapp {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.65rem 1rem;
+  font: 700 0.9rem/1.2 Manrope, sans-serif;
+  text-decoration: none;
+}
+.service-modal-whatsapp {
+  background: #128c48;
+  color: #fff;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+.service-modal-whatsapp:hover {
+  background: #0d7837;
+  transform: translateY(-1px);
+}
+.service-modal-whatsapp:focus-visible,
+.service-modal-close:focus-visible,
+.service-modal-secondary:focus-visible {
+  outline: 3px solid #079f9a;
+  outline-offset: 2px;
+}
+@keyframes serviceModalIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes serviceModalOut {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(6px) scale(0.99); }
+}
+@keyframes serviceBackdropIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.service-detail-modal[open] {
+  animation: serviceModalIn 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.service-detail-modal[open]::backdrop {
+  animation: serviceBackdropIn 180ms ease-out both;
+}
+.service-detail-modal[open].is-closing {
+  animation: serviceModalOut 160ms ease-in both;
+}
+@media (max-width: 767px) {
+  .service-detail-modal {
+    width: 96vw;
+    height: 94vh;
+    height: 94dvh;
+    max-height: 94dvh;
+    border-radius: 18px;
+  }
+  .service-detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(190px, 34%) minmax(0, 1fr);
+  }
+  .service-detail-content {
+    gap: 0.9rem;
+    padding: 1rem;
+  }
+  .service-detail-heading h2 {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+  .service-detail-actions {
+    bottom: -1rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    padding: 0.75rem 1rem;
+  }
+  .service-modal-whatsapp {
+    flex: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-detail-modal *,
+  .service-detail-modal *::before,
+  .service-detail-modal *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .service-detail-modal[open],
+  .service-detail-modal[open]::backdrop,
+  .service-detail-modal[open].is-closing {
+    animation-duration: 0.01ms !important;
+  }
+  .service-modal-whatsapp:hover {
+    transform: none;
+  }
+}
