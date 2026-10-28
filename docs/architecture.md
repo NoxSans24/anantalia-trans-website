@@ -8,7 +8,11 @@
 
 `css/main.css` memuat gaya kustom bersama Beranda, Tentang Kami, Layanan, dan Pusat Bantuan. `css/armada.css` memuat gaya khusus Armada. Utilitas Tailwind dihasilkan oleh CDN.
 
+<<<<<<< HEAD
 `js/tailwind-config.js` memuat konfigurasi Tailwind bersama setelah CDN. `js/site-shell.js` membentuk menu mobile dari tautan desktop, mengelola status ARIA, Escape/klik luar/breakpoint, dan tombol kembali ke atas. Setiap halaman memuat tepat satu shell. `js/pusat-bantuan.js` mengelola FAQ dan scroll reveal. Controller peta, filter, zoom/geser, serta modal lokasi berada inline di `pages/pusat-bantuan.html`; siluet peta Sage/Teal dimuat dari SVG lokal `assets/indonesia-silhouette.svg`, sementara pin kota perkiraan dirender sebagai elemen terpisah. Modal memuat Google Maps untuk area kota yang dipilih.
+=======
+`js/tailwind-config.js` memuat konfigurasi Tailwind bersama setelah CDN. `js/site-shell.js` membentuk menu mobile dari tautan desktop, mengelola status ARIA, Escape/klik luar/breakpoint, dan tombol kembali ke atas. Setiap halaman memuat tepat satu shell. `js/pusat-bantuan.js` mengelola modal detail cabang: buka/tutup, Escape, klik backdrop, pengembalian fokus, serta penahanan fokus Tab. Perilaku ekspor lain yang berbeda tetap berada di halamannya.
+>>>>>>> origin/main
 
 ## Aset dan dependensi eksternal
 
@@ -25,5 +29,10 @@ Navigasi lokal Beranda, Tentang Kami, Layanan, Armada, dan Pusat Bantuan tersedi
 - Pertahankan ekspor Stitch sumber dan `logo.png`.
 - Perbarui URL legal hanya setelah tujuan resmi diberikan.
 - Jalankan `tests/validate.ps1` setelah perubahan.
+<<<<<<< HEAD
 - Lakukan pemeriksaan visual saat Tailwind CDN dapat dimuat; validasi statis dan interaksi DOM saja tidak membuktikan kesetaraan visual.
 
+=======
+- Lakukan pemeriksaan visual saat Tailwind CDN dapat dimuat; validasi statis dan interaksi DOM saja tidak membuktikan kesetaraan visual.
+
+>>>>>>> origin/main

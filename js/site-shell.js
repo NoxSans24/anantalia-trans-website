@@ -15,8 +15,12 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+<<<<<<< HEAD
   const desktopNavigation = document.querySelector('[data-site-navigation]') ||
     document.querySelector('header nav:not(#mobile-navigation)');
+=======
+  const desktopNavigation = document.querySelector('[data-site-navigation]');
+>>>>>>> origin/main
   const mobileNavigation = document.getElementById('mobile-navigation');
   const toggle = document.querySelector('[data-mobile-nav-toggle]');
 
@@ -69,4 +73,8 @@
   desktopBreakpoint.addEventListener('change', (event) => {
     if (event.matches) setOpen(false);
   });
+<<<<<<< HEAD
 })();
+=======
+})();
+>>>>>>> origin/main

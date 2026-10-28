@@ -65,6 +65,7 @@
     will-change: transform, opacity;
   }
 
+<<<<<<< HEAD
   .fleet-catalogue-card {
     min-width: 0;
     height: 100%;
@@ -156,6 +157,8 @@
     outline-offset: 2px;
   }
 
+=======
+>>>>>>> origin/main
   .fleet-item.card-hidden {
     opacity: 0;
     transform: translateY(22px);
@@ -206,6 +209,7 @@
       animation: none !important;
     }
   }
+<<<<<<< HEAD
 
 /* Shared vehicle detail dialog */
 .vehicle-detail-modal {
@@ -518,3 +522,5 @@
     animation-duration: 0.01ms !important;
   }
 }
+=======
+>>>>>>> origin/main
