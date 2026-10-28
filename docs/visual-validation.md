@@ -1,12 +1,9 @@
 # Validasi Visual dan Browser
 
-<<<<<<< HEAD
 ## Perubahan katalog Armada
 
 Katalog Armada diselaraskan dengan 63 model dummy dan 7 kategori dalam `fleet (1).json` terbaru. Nama, kategori, tarif, deskripsi, spesifikasi, fasilitas, dan status ditampilkan dari snapshot data tersebut; 20 foto referensi Commons yang sudah dipasangkan ke model sama tetap dipertahankan, sementara entri lain mengikuti placeholder dari sumber. Tautan `imageSearchUrl` tetap tersedia pada detail. File JSON tidak diubah. Perubahan ini belum diuji ulang di browser; uraian pemeriksaan browser di bawah hanya berlaku untuk run terdahulu yang dijelaskan pada waktunya.
 
-=======
->>>>>>> origin/main
 ## Lingkungan dan batas
 
 Browser: Google Chrome 155 melalui Playwright bawaan runtime, tanpa dependensi proyek. Halaman dibuka dari URL `file:///` yang dibentuk dari path workspace aktif. Viewport yang diminta: desktop 1440 × 900 dan mobile 390 × 844.
@@ -16,11 +13,7 @@ Tailwind CSS CDN gagal dimuat pada pemeriksaan lokal dan skrip mencatat `tailwin
 ## Pemeriksaan pascaintegrasi terbaru
 
 - Kelima halaman mempunyai judul, dua gambar logo lokal yang berhasil dimuat, satu tombol kembali ke atas, dan shell navigasi.
-<<<<<<< HEAD
 - Pada viewport desktop 1440 × 900 dan mobile 390 × 844, scroll memunculkan tombol kembali ke atas di semua lima halaman; klik mengembalikan `scrollY` ke 0.
-=======
-- Pada viewport desktop 1440 × 900 dan mobile 390 × 844, scroll memunculkan tombol kembali ke atas di semua lima halaman; klik mengembalikan `scrollY` ke 0.
->>>>>>> origin/main
 - Kelima tautan navigasi desktop diuji dengan klik di Chrome dan masing-masing membuka berkas lokal serta judul halaman yang sesuai.
 - Pada Pusat Bantuan, menu mobile menghasilkan lima tautan navigasi, status ARIA kembali tertutup setelah Escape, terdapat lima pemicu FAQ, dan FAQ kedua dapat dibuka.
 - Dialog cabang berubah menjadi terbuka saat dipicu, Escape mengubah status menjadi tertutup, dan fokus kembali ke tombol pemicu.
@@ -46,7 +39,6 @@ Validator sebelumnya menemukan 16 `href="#"` pada empat halaman awal: masing-mas
 
 - Kesetaraan visual dengan `screen.png`, screenshot representatif, layout final, overflow mobile, serta pemuatan font/gambar eksternal.
 - Perilaku visual modal dan menu saat CSS utility aktif.
-<<<<<<< HEAD
 - Validasi formal HTML/CSS, performa, dan aksesibilitas formal.
 
 ## Revisi UI setelah audit, 28 Oktober 2026
@@ -69,10 +61,3 @@ Validator sebelumnya menemukan 16 `href="#"` pada empat halaman awal: masing-mas
 
 
 
-=======
-- Validasi formal HTML/CSS, performa, dan aksesibilitas formal.
-
-
-
-
->>>>>>> origin/main

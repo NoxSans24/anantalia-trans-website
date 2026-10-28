@@ -10,10 +10,5 @@ Skrip memeriksa lima halaman, judul, shell dan tombol kembali ke atas tunggal, d
 
 ## Hasil pemeriksaan terakhir sebelum dokumentasi ini
 
-<<<<<<< HEAD
 LULUS pada lima halaman. Tidak ada `href="#"`; label legal tetap berupa teks biasa sampai URL resmi tersedia. Pemeriksaan Chrome dan keterbatasan CDN dirangkum di `docs/visual-validation.md`.
 
-=======
-LULUS pada lima halaman. Tidak ada `href="#"`; label legal tetap berupa teks biasa sampai URL resmi tersedia. Pemeriksaan Chrome dan keterbatasan CDN dirangkum di `docs/visual-validation.md`.
-
->>>>>>> origin/main

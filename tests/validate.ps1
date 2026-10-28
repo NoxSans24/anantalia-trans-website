@@ -26,11 +26,11 @@ foreach ($relativePage in $pages) {
     if ($html -match 'Scroll to top floating button logic') {
         $failures.Add("Logika tombol kembali ke atas masih inline di $relativePage; gunakan shell bersama.")
     }
-    $ids = @([regex]::Matches($html, '\bid="([^"]+)"') | ForEach-Object { $_.Groups[1].Value })
+    $ids = @([regex]::Matches($html, '(?:^|\s)id\s*=\s*"([^"]+)"') | ForEach-Object { $_.Groups[1].Value })
     $duplicates = @($ids | Group-Object | Where-Object Count -gt 1 | ForEach-Object Name)
     if ($duplicates.Count) { $failures.Add("ID duplikat di ${relativePage}: $($duplicates -join ', ')") }
 
-    foreach ($match in [regex]::Matches($html, '\b(?:href|src)="([^"]+)"')) {
+    foreach ($match in [regex]::Matches($html, '(?:^|\s)(?:href|src)\s*=\s*"([^"]+)"')) {
         $url = $match.Groups[1].Value
         if ([string]::IsNullOrWhiteSpace($url) -or $url -match '^(https?:|mailto:|tel:|#|javascript:|data:)') { continue }
         $localPath = ($url -split '[?#]')[0]
@@ -39,7 +39,7 @@ foreach ($relativePage in $pages) {
         }
     }
 
-    foreach ($match in [regex]::Matches($html, '\bhref="([^"]+)"')) {
+    foreach ($match in [regex]::Matches($html, '(?:^|\s)href\s*=\s*"([^"]+)"')) {
         $url = $match.Groups[1].Value
         if ($url -eq '#') { $placeholderLinks++; continue }
         if ($url -match '^(https?:|mailto:|tel:|javascript:|data:)') { continue }
@@ -49,7 +49,7 @@ foreach ($relativePage in $pages) {
         $targetPage = if ([string]::IsNullOrWhiteSpace($localPath)) { $page } else { Join-Path (Split-Path -Parent $page) $localPath }
         if ($fragment -and [IO.Path]::GetExtension($targetPage) -eq '.html' -and (Test-Path -LiteralPath $targetPage)) {
             $targetHtml = Get-Content -Raw $targetPage
-            $targetIds = @([regex]::Matches($targetHtml, '\bid="([^"]+)"') | ForEach-Object { $_.Groups[1].Value })
+            $targetIds = @([regex]::Matches($targetHtml, '(?:^|\s)id\s*=\s*"([^"]+)"') | ForEach-Object { $_.Groups[1].Value })
             if ($fragment -notin $targetIds) { $failures.Add("Target fragmen tidak ditemukan di ${relativePage}: $url") }
         }
     }
