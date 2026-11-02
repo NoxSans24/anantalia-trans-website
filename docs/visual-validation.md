@@ -1,63 +1,28 @@
 # Validasi Visual dan Browser
 
-## Perubahan katalog Armada
+## Run Phase 1 — 1 November 2026
 
-Katalog Armada diselaraskan dengan 63 model dummy dan 7 kategori dalam `fleet (1).json` terbaru. Nama, kategori, tarif, deskripsi, spesifikasi, fasilitas, dan status ditampilkan dari snapshot data tersebut; 20 foto referensi Commons yang sudah dipasangkan ke model sama tetap dipertahankan, sementara entri lain mengikuti placeholder dari sumber. Tautan `imageSearchUrl` tetap tersedia pada detail. File JSON tidak diubah. Perubahan ini belum diuji ulang di browser; uraian pemeriksaan browser di bawah hanya berlaku untuk run terdahulu yang dijelaskan pada waktunya.
+Pratinjau dijalankan melalui `scripts/serve.js` di `http://127.0.0.1:4174` untuk browser in-app. Viewport yang diminta adalah desktop 1440×900 dan mobile 390×844. Ukuran area dokumen yang dilaporkan browser lebih kecil karena scrollbar (sekitar 1425 px dan 375 px). Semua lima halaman dibuka pada dua ukuran tersebut.
 
-## Lingkungan dan batas
+### Visual
 
-Browser: Google Chrome 155 melalui Playwright bawaan runtime, tanpa dependensi proyek. Halaman dibuka dari URL `file:///` yang dibentuk dari path workspace aktif. Viewport yang diminta: desktop 1440 × 900 dan mobile 390 × 844.
+- Kelima halaman memuat `css/tailwind.generated.css`, menggunakan Manrope, dan tidak merujuk Tailwind CDN.
+- Tidak ditemukan overflow horizontal pada desktop maupun mobile.
+- Screenshot desktop Armada menunjukkan heading, banner data dummy, pencarian, tujuh kategori, grid kartu, dan CTA dalam tata letak yang konsisten dengan identitas teal/sage.
+- Screenshot mobile Armada memperlihatkan grid yang menyempit ke satu kolom; menu mobile terbuka dan menampilkan lima tautan. Wordmark yang sebelumnya terpotong diubah menjadi dua baris pada lebar sempit, lalu dicek ulang.
+- Screenshot desktop dan mobile Pusat Bantuan serta Layanan ditinjau. Struktur bertumpuk pada layar sempit dan tidak meluap.
+- Foto tertentu menggunakan fallback placeholder ketika foto referensi tidak tersedia. Google Fonts dan gambar eksternal masih bergantung jaringan.
 
-Tailwind CSS CDN gagal dimuat pada pemeriksaan lokal dan skrip mencatat `tailwind is not defined`. Oleh sebab itu tes di bawah yang memeriksa status DOM/handler bukan bukti kesesuaian visual. Tidak ada klaim screenshot/layout/responsivitas lulus dari sesi ini dan screenshot tanpa stylesheet tidak disimpan.
+### Interaksi
 
-## Pemeriksaan pascaintegrasi terbaru
+- Armada: 63 kartu dimuat dari JSON. Semua 7 kategori diuji: City Car / EV 11, MPV Standar 15, MPV Keluarga 16, Premium 13, Minibus 6, Bus Medium 1, Bus Besar 1. Jumlah hasil cocok dengan `fleet.json`.
+- Armada: pencarian `Toyota All New Innova Zenix` menemukan model tersebut dan varian Hybrid; pencarian tanpa hasil menampilkan empty state; Reset mengembalikan 63 kartu dan membersihkan query.
+- Armada: dialog detail model dibuka; judul, 15 baris detail, status data dummy, dan gambar placeholder tersedia; tombol tutup diuji.
+- Layanan: filter Rental Mobil menyisakan satu kartu; dialog detail membuka ringkasan, fitur, dan ketentuan; dialog dapat ditutup.
+- Pusat Bantuan: accordion pertama ditutup ketika FAQ kedua dibuka. Pencarian `Bandung` menyaring pin. Memilih area membuka panel detail dengan status “Perlu konfirmasi pemilik”.
+- Navigasi mobile membuka panel dengan lima tautan dan mengubah `aria-expanded`; navigasi lokal/path dan target fragmen diperiksa `tests/validate.ps1`.
+- Log console halaman Armada setelah pengujian katalog tidak mengandung pesan.
 
-- Kelima halaman mempunyai judul, dua gambar logo lokal yang berhasil dimuat, satu tombol kembali ke atas, dan shell navigasi.
-- Pada viewport desktop 1440 × 900 dan mobile 390 × 844, scroll memunculkan tombol kembali ke atas di semua lima halaman; klik mengembalikan `scrollY` ke 0.
-- Kelima tautan navigasi desktop diuji dengan klik di Chrome dan masing-masing membuka berkas lokal serta judul halaman yang sesuai.
-- Pada Pusat Bantuan, menu mobile menghasilkan lima tautan navigasi, status ARIA kembali tertutup setelah Escape, terdapat lima pemicu FAQ, dan FAQ kedua dapat dibuka.
-- Dialog cabang berubah menjadi terbuka saat dipicu, Escape mengubah status menjadi tertutup, dan fokus kembali ke tombol pemicu.
-- Menu diuji pada viewport 390 × 844. Karena CSS Tailwind tidak aktif, pemeriksaan ini hanya mengonfirmasi perubahan DOM/status handler, bukan tampilan atau tap target.
-- Chrome mencatat error `tailwind is not defined` akibat CDN; tidak ada klaim visual final.
+### Batas dan cakupan
 
-## Interaksi halaman lain yang telah dicoba
-
-Run sebelumnya pada empat halaman kerja yang tersedia saat itu memeriksa navigasi antarhalaman, CTA Beranda ke Tentang Kami, menu mobile/Escape, filter Layanan (Rental Mobil satu kartu; Semua empat), pencarian Armada `Avanza` (satu hasil), Reset (enam unit), dan buka/tutup detail Armada. Run tersebut mendahului integrasi halaman Pusat Bantuan; tombol kembali ke atas kemudian diuji ulang pada kelima halaman di atas.
-
-## Audit tautan (sebelumnya placeholder)
-
-Validator sebelumnya menemukan 16 `href="#"` pada empat halaman awal: masing-masing memiliki tautan header Bantuan, footer Bantuan, Syarat & Ketentuan, dan Kebijakan Privasi. Delapan navigasi Bantuan kini memiliki tujuan lokal; delapan tautan legal awal dan dua label legal dari halaman kelima tidak punya tujuan resmi. Untuk menghilangkan aksi mati tanpa mengarang URL atau isi, semua label legal sekarang teks biasa tanpa `href`; jumlah `href="#"` saat ini nol.
-
-| Halaman | Tautan header/footer Bantuan | Status label legal |
-|---|---|---|
-| Beranda (`index.html`) | Header dan footer menuju Pusat Bantuan lokal | Syarat & Ketentuan dan Kebijakan Privasi berupa teks biasa (URL resmi belum tersedia) |
-| Tentang Kami (`pages/tentang-kami.html`) | Header dan footer menuju Pusat Bantuan lokal | Syarat & Ketentuan dan Kebijakan Privasi berupa teks biasa (URL resmi belum tersedia) |
-| Layanan (`pages/layanan.html`) | Header dan footer menuju Pusat Bantuan lokal | Syarat & Ketentuan dan Kebijakan Privasi berupa teks biasa (URL resmi belum tersedia) |
-| Armada (`pages/armada.html`) | Header dan footer menuju Pusat Bantuan lokal | Syarat & Ketentuan dan Kebijakan Privasi berupa teks biasa (URL resmi belum tersedia) |
-| Pusat Bantuan (`pages/pusat-bantuan.html`) | Header dan footer berada di halaman Pusat Bantuan | Syarat & Ketentuan dan Kebijakan Privasi berupa teks biasa (URL resmi belum tersedia) |
-## Belum diverifikasi
-
-- Kesetaraan visual dengan `screen.png`, screenshot representatif, layout final, overflow mobile, serta pemuatan font/gambar eksternal.
-- Perilaku visual modal dan menu saat CSS utility aktif.
-- Validasi formal HTML/CSS, performa, dan aksesibilitas formal.
-
-## Revisi UI setelah audit, 28 Oktober 2026
-
-- Kontras permukaan CTA WhatsApp, indikator fokus tombol kembali ke atas, affordance avatar header, dan scrollbar WebKit diperbarui pada CSS lokal.
-- Filter wilayah dan pencarian Pusat Bantuan sekarang memakai kriteria gabungan, menyaring daftar lokasi, dan menampilkan status saat peta tidak memiliki hasil.
-- Header mobile kini memiliki aturan layout lokal untuk logo, label merek, CTA WhatsApp, tombol menu, dan panel navigasi. `js/site-shell.js` juga menemukan navigasi desktop Pusat Bantuan yang sebelumnya tidak memiliki atribut `data-site-navigation`.
-- Modal detail lokasi kini menempatkan informasi di samping peta Google Maps pada layar lebar dan menumpuknya pada ponsel. Peta memakai pencarian nama kota/provinsi; alamat atau titik pool spesifik tidak dibuat. Perubahan modal belum diuji browser.
-- Revisi tersebut belum diuji melalui browser setelah perubahan. Pengujian visual dan interaksi pada Chrome desktop/mobile masih menunggu pemeriksaan pengguna.
-- Tailwind tetap dimuat dari CDN. Workspace ini tidak memiliki output CSS lokal yang dapat menggantikannya tanpa menambahkan proses/dependensi baru; ketergantungan layout pada koneksi eksternal masih menjadi batas.
-
-## Pembaruan peta cakupan, 28 Oktober 2026
-
-- Siluet pada referensi gambar yang dikirim pengguna kini menjadi aset SVG lokal berwarna Sage `#A3B8A1` dengan garis Teal `#079F9A`. Gambar putih dan watermark tidak dimasukkan ke halaman. Proyeksi pin dipetakan ke bentang siluet; ukuran pin diperkecil dan pulse pada pin utama dihilangkan agar kawasan padat tetap terbaca.
-- Tombol zoom memperbesar/memperkecil peta dari 100% sampai 250%, menyediakan reset, status zoom untuk pembaca layar, dan geser peta saat diperbesar. Pin serta siluet berada pada satu lapisan sehingga ikut bergerak dan membesar bersama.
-- Posisi 22 pin dihitung dari koordinat kota/area perkiraan di atas proyeksi peta yang sama. Pin menunjukkan area kota layanan, bukan alamat pool atau titik penjemputan yang terverifikasi; pin Jakarta Timur tetap ditandai sebagai pool pusat sesuai data halaman.
-- Aset peta mempertahankan bentuk ilustratif pada referensi, bukan dataset geospasial resmi, batas administratif, atau peta navigasi. Posisi pin tetap perkiraan area kota, bukan koordinat pool yang terverifikasi.
-- Perubahan peta belum diperiksa di Chrome secara visual. Tidak ada klaim hasil uji tampilan desktop atau mobile untuk perubahan ini.
-
-
-
-
+Pemeriksaan ini adalah pengujian halaman lokal di browser, bukan deployment produksi. Pengujian tidak memvalidasi layanan WhatsApp/email, ketersediaan URL gambar eksternal, kepemilikan nomor, data bisnis, atau perilaku pada semua browser/perangkat. Tidak dilakukan pembandingan pixel dengan ekspor desain. Validator HTML5/CSS eksternal, Lighthouse, uji performa, dan audit aksesibilitas formal belum dijalankan. Lulus build dan validator statis sendiri tidak dianggap sebagai bukti visual; hasil interaksi dan tampilan browser di atas dicatat terpisah.

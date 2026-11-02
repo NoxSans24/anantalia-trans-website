@@ -1,0 +1,17 @@
+{
+  "name": "anantalia-trans-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss --config ./js/tailwind-config.js --input ./css/tailwind.input.css --output ./css/tailwind.generated.css --minify",
+    "watch:css": "tailwindcss --config ./js/tailwind-config.js --input ./css/tailwind.input.css --output ./css/tailwind.generated.css --watch",
+    "serve": "node ./scripts/serve.js",
+    "test:stabilization": "node ./tests/stabilization.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "0.5.9",
+    "postcss": "8.5.32",
+    "postcss-selector-parser": "6.1.5",
+    "tailwindcss": "3.4.17"
+  }
+}

@@ -1,40 +1,49 @@
 # ANANTALIA TRANS
 
-Situs statis ANANTALIA TRANS menggunakan ekspor Google Stitch yang tersedia. Beranda memakai ekspor `beranda_anantalia_trans` sebagai `index.html`. Sumber Stitch asli dipertahankan di folder masing-masing.
+Situs statis multi-halaman untuk ANANTALIA TRANS. Informasi bisnis, layanan, kontak, jangkauan, tarif, dan spesifikasi kendaraan yang belum dikonfirmasi diberi penanda agar tidak disajikan sebagai fakta.
 
-## Teknologi
+## Halaman
 
-- HTML statis
-- Tailwind CSS melalui CDN
-- CSS kustom lokal di `css/`
-- JavaScript vanilla; konfigurasi Tailwind di `js/tailwind-config.js`, shell navigasi dan tombol kembali ke atas di `js/site-shell.js`, serta interaksi modal Pusat Bantuan di `js/pusat-bantuan.js`
-- Font Manrope dan Material Symbols melalui Google Fonts
+- `index.html` — Beranda
+- `pages/tentang-kami.html` — Tentang Kami
+- `pages/layanan.html` — Layanan dan filter kategori
+- `pages/armada.html` — Katalog armada yang dibuka dengan enam pilihan rekomendasi; tombol menampilkan seluruh katalog. Pencarian serta filter kategori, kapasitas, dan transmisi bekerja bersama; dialog detail tetap tersedia.
+- `pages/pusat-bantuan.html` — FAQ, peta ilustratif, filter area, dan dialog lokasi
 
-Tidak ada framework, paket, atau proses build lokal. Tailwind CDN, Google Fonts, foto referensi Wikimedia Commons, dan gambar Googleusercontent memerlukan koneksi internet.
+## Teknologi dan sumber data
 
-## Halaman dan aset
+- HTML, CSS, dan JavaScript vanilla.
+- Tailwind CSS 3.4.17 dikompilasi ke `css/tailwind.generated.css` secara lokal. Halaman tidak memuat Tailwind CDN.
+- `fleet.json` adalah satu-satunya sumber katalog 63 entri armada, termasuk metadata gambar dan tautan sumbernya. Seluruh data tarif dan spesifikasi tetap ditandai sebagai dummy.
+- Manrope dan satu stylesheet Material Symbols per halaman diambil dari Google Fonts; font memerlukan koneksi internet.
+- Foto dari sumber eksternal dapat tidak tersedia. Kartu Armada memakai `assets/placeholder-vehicle.svg` sebagai fallback.
 
-- `index.html`: Beranda
-- `pages/tentang-kami.html`: Tentang Kami
-- `pages/layanan.html`: Layanan
-- `pages/armada.html`: Armada
-- `pages/pusat-bantuan.html`: Pusat Bantuan, diadaptasi dari ekspor Stitch yang ditemukan di `pusat_bantuan_cabang_kami_state_modal_detail_cabang_koordinasi_jemput_anantalia/`
-- `fleet (1).json`: sumber armada terbaru, berisi 63 model dummy dalam 7 kategori. Nama, kategori, deskripsi, spesifikasi, harga, fasilitas, dan status pada katalog serta modal detail telah diselaraskan dengan file ini. Dua puluh foto referensi Commons yang sebelumnya dipilih tetap dipakai sebagai media prototipe untuk model yang cocok; entri lainnya mengikuti placeholder di data. Sumber, kredit, dan lisensi foto tersedia di modal detail. Foto Commons bukan dokumentasi unit milik ANANTALIA TRANS. Tarif, spesifikasi, fasilitas, dan status merupakan data dummy.
-- `css/main.css`, `css/armada.css`: CSS lokal
-- `js/tailwind-config.js`, `js/site-shell.js`, `js/pusat-bantuan.js`: konfigurasi dan interaksi bersama/khusus halaman
-- `js/armada-detail.js`: mengisi modal Lihat Detail dari data katalog pada kartu Armada
-- `logo.png`: logo resmi root, dipakai semua lima halaman kerja dan dipertahankan
-- `assets/indonesia-silhouette.svg`: siluet peta lokal pada Pusat Bantuan, diwarnai Sage `#A3B8A1` dan Teal `#079F9A`; pin area kota tetap dirender terpisah agar dapat difilter dan dipilih
-- Folder ekspor Stitch termasuk `code.html` dan `screen.png`: sumber asli dipertahankan
-- `docs/`: arsitektur, inventaris, kemajuan, dan catatan pemeriksaan
+## Menjalankan secara lokal
 
-Semua tautan navigasi Bantuan mengarah ke halaman Pusat Bantuan lokal. Label Syarat & Ketentuan dan Kebijakan Privasi ditampilkan sebagai teks biasa pada lima halaman sampai URL dan konten resmi tersedia; tidak ada tautan `href="#"` mati atau konten legal rekaan.
+Katalog memuat `fleet.json` melalui HTTP, sehingga buka `index.html` langsung sebagai `file://` tidak menjalankan katalog. Jalankan dari root proyek:
 
-## Menjalankan dan memvalidasi
+```powershell
+npm ci
+npm run build:css
+npm run serve
+```
 
-Buka `index.html` di browser atau sajikan root sebagai situs statis. Jalankan pemeriksaan statis dengan:
+Buka `http://127.0.0.1:4173`. `npm run watch:css` tersedia ketika mengubah utility class.
 
-`powershell -NoProfile -ExecutionPolicy Bypass -File tests/validate.ps1`
+## Pemeriksaan
 
-Hasil aktual dan batas pemeriksaan browser dicatat di `docs/visual-validation.md`.
+```powershell
+npm run build:css
+npm run test:stabilization
+powershell -NoProfile -ExecutionPolicy Bypass -File tests/validate.ps1
+```
 
+Pemeriksaan statis dan interaksi browser memiliki cakupan yang berbeda. Hasil pemeriksaan terakhir dicatat di `docs/stabilization-report.md` dan rincian browser di `docs/visual-validation.md`.
+
+## Pemeliharaan
+
+- Perbarui daftar dan metadata armada hanya di `fleet.json`; jangan menambahkan kembali kartu katalog statis di HTML.
+- Setelah menambah atau mengubah utility class di HTML/JavaScript, jalankan `npm run build:css` dan `npm run test:stabilization`.
+- Konfirmasi klaim, nomor kontak/WhatsApp, alamat, kebijakan, tarif, jangkauan, fasilitas, dan status operasional kepada pemilik sebelum dipublikasikan sebagai informasi faktual.
+- URL Syarat & Ketentuan dan Kebijakan Privasi belum tersedia; labelnya tetap berupa teks biasa.
+- Jangan mengubah `desain.md` atau `docs/audit-project-2026-11-01.md` tanpa permintaan tersendiri.

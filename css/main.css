@@ -323,13 +323,13 @@ img[alt="Profile"] {
 
   body > header a[data-path="beranda"] > div > span:first-child {
     display: block;
-    overflow: hidden;
+    overflow: visible;
     color: #006764;
     font-size: 0.875rem !important;
     font-weight: 700;
     line-height: 1.15 !important;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    text-overflow: clip;
+    white-space: normal;
   }
 
   body > header a[data-path="beranda"] > div > span:nth-child(2) {

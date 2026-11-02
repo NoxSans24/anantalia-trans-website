@@ -29,18 +29,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20Calya%20G%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Calya+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Toyota Calya mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Toyota_Calya_G_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Toyota Calya; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-02-toyota-grand-new-avanza",
@@ -67,18 +71,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021%20Toyota%20Avanza%201.5%20G%20Toyota%20Safety%20Sense%20(Indonesia)%20front%20view%2002.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Grand+New+Avanza+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Toyota Grand New Avanza mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:2021_Toyota_Avanza_1.5_G_Toyota_Safety_Sense_(Indonesia)_front_view_02.jpg",
+        "license": "CC BY-SA 4.0",
+        "credit": "Andra Febrian"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Toyota Grand New Avanza; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-03-daihatsu-sigra",
@@ -105,18 +113,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daihatsu%20Sigra%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+Sigra+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Daihatsu Sigra mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Daihatsu_Sigra_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Daihatsu Sigra; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-04-daihatsu-new-sigra",
@@ -143,18 +155,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daihatsu%20Sigra%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+New+Sigra+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Daihatsu New Sigra mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Daihatsu_Sigra_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Daihatsu New Sigra; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-05-toyota-new-calya",
@@ -181,18 +197,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20Calya%20G%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+New+Calya+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Toyota New Calya mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Toyota_Calya_G_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Toyota New Calya; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-06-toyota-agya",
@@ -219,18 +239,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20Agya%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+Agya+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Toyota Agya mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Toyota_Agya_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Toyota Agya; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-07-toyota-new-avanza-2019",
@@ -257,18 +281,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021%20Toyota%20Avanza%201.5%20G%20Toyota%20Safety%20Sense%20(Indonesia)%20front%20view%2002.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+New+Avanza+2019+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Toyota New Avanza 2019 mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:2021_Toyota_Avanza_1.5_G_Toyota_Safety_Sense_(Indonesia)_front_view_02.jpg",
+        "license": "CC BY-SA 4.0",
+        "credit": "Andra Febrian"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Toyota New Avanza 2019; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-08-daihatsu-all-new-xenia-2022",
@@ -295,18 +323,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daihatsu%20Xenia%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+All+New+Xenia+2022+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Daihatsu All New Xenia 2022 mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Daihatsu_Xenia_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Daihatsu All New Xenia 2022; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-09-toyota-all-new-avanza-2022",
@@ -333,18 +365,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021%20Toyota%20Avanza%201.5%20G%20Toyota%20Safety%20Sense%20(Indonesia)%20front%20view%2002.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Toyota+All+New+Avanza+2022+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Toyota All New Avanza 2022 mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:2021_Toyota_Avanza_1.5_G_Toyota_Safety_Sense_(Indonesia)_front_view_02.jpg",
+        "license": "CC BY-SA 4.0",
+        "credit": "Andra Febrian"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Toyota All New Avanza 2022; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-10-daihatsu-ayla",
@@ -371,18 +407,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daihatsu%20Ayla%20front%20view.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+Ayla+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Daihatsu Ayla mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Daihatsu_Ayla_front_view.jpg",
+        "license": "CC BY-SA 3.0",
+        "credit": "Sabung.hamster (photo)"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Daihatsu Ayla; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-11-daihatsu-new-xenia",
@@ -409,18 +449,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daihatsu%20Xenia%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+New+Xenia+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Daihatsu New Xenia mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Daihatsu_Xenia_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Daihatsu New Xenia; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-12-daihatsu-grand-new-xenia",
@@ -447,18 +491,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daihatsu%20Xenia%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+Grand+New+Xenia+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Daihatsu Grand New Xenia mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Daihatsu_Xenia_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Daihatsu Grand New Xenia; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-13-suzuki-ertiga",
@@ -485,18 +533,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Suzuki%20Ertiga%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Suzuki+Ertiga+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Suzuki Ertiga mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Suzuki_Ertiga_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Suzuki Ertiga; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-14-daihatsu-xenia",
@@ -523,18 +575,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daihatsu%20Xenia%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+Xenia+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Daihatsu Xenia mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Daihatsu_Xenia_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Daihatsu Xenia; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-15-mitsubishi-xpander",
@@ -561,18 +617,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021%20Mitsubishi%20Xpander%20Ultimate%20(Indonesia)%20front%20view.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mitsubishi+Xpander+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Mitsubishi Xpander mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:2021_Mitsubishi_Xpander_Ultimate_(Indonesia)_front_view.jpg",
+        "license": "CC BY-SA 4.0",
+        "credit": "Andra Febrian"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Mitsubishi Xpander; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-16-suzuki-all-new-ertiga",
@@ -599,18 +659,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Suzuki%20Ertiga%20(Front)%2C%20Jakarta%2C%20Indonesia.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Suzuki+All+New+Ertiga+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Suzuki All New Ertiga mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Suzuki_Ertiga_(Front),_Jakarta,_Indonesia.jpg",
+        "license": "CC0 1.0",
+        "credit": "RichardSummersault"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Suzuki All New Ertiga; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-17-toyota-all-new-rush",
@@ -648,7 +712,8 @@
         "query": "Toyota All New Rush mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota All New Rush belum tersedia"
     },
     {
       "id": "fleet-18-daihatsu-all-new-terios",
@@ -675,18 +740,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daihatsu%20Terios%201.5%20X%20Deluxe%20-%20Indonesia%20International%20Motor%20Show%202018%20-%20Front%20view%20-%20April%2026%202018.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Daihatsu+All+New+Terios+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Daihatsu All New Terios mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Daihatsu_Terios_1.5_X_Deluxe_-_Indonesia_International_Motor_Show_2018_-_Front_view_-_April_26_2018.jpg",
+        "license": "CC BY-SA 4.0",
+        "credit": "Sabung.hamster"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Daihatsu All New Terios; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-19-wuling-confero-s",
@@ -713,18 +782,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wuling%20Confero%20S%20(front)%2C%20Denpasar.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Wuling+Confero+S+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Wuling Confero S mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:Wuling_Confero_S_(front),_Denpasar.jpg",
+        "license": "CC BY-SA 4.0",
+        "credit": "Sabung.hamster"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Wuling Confero S; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-20-honda-mobilio",
@@ -762,7 +835,8 @@
         "query": "Honda Mobilio mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Honda Mobilio belum tersedia"
     },
     {
       "id": "fleet-21-mitsubishi-xpander-facelift-2021",
@@ -789,18 +863,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021%20Mitsubishi%20Xpander%20Ultimate%20(Indonesia)%20front%20view.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mitsubishi+Xpander+Facelift+2021+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Mitsubishi Xpander Facelift 2021 mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:2021_Mitsubishi_Xpander_Ultimate_(Indonesia)_front_view.jpg",
+        "license": "CC BY-SA 4.0",
+        "credit": "Andra Febrian"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Mitsubishi Xpander Facelift 2021; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-22-nissan-all-new-livina",
@@ -838,7 +916,8 @@
         "query": "Nissan All New Livina mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Nissan All New Livina belum tersedia"
     },
     {
       "id": "fleet-23-suzuki-xl7",
@@ -876,7 +955,8 @@
         "query": "Suzuki XL7 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Suzuki XL7 belum tersedia"
     },
     {
       "id": "fleet-24-hyundai-stargazer",
@@ -914,7 +994,8 @@
         "query": "Hyundai Stargazer mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Hyundai Stargazer belum tersedia"
     },
     {
       "id": "fleet-25-mitsubishi-xpander-cross",
@@ -941,18 +1022,22 @@
         "Contoh overtime: tarif tambahan per jam perlu dikonfirmasi.",
         "Pilihan paket: dengan driver/BBM atau sewa unit — hanya contoh, perlu konfirmasi."
       ],
-      "image": "../assets/placeholder-vehicle.svg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2022%20Mitsubishi%20Xpander%20Cross%20(Indonesia)%20front%20view.jpg?width=1000",
       "isDummy": true,
       "verificationStatus": "dummy",
       "source": "generated-demo-data",
       "imageSearchUrl": "https://www.google.com/search?tbm=isch&q=Mitsubishi+Xpander+Cross+mobil+Indonesia+foto+eksterior",
       "imageSource": {
-        "provider": "Google Images",
+        "provider": "Wikimedia Commons",
         "type": "search-link",
         "query": "Mitsubishi Xpander Cross mobil Indonesia foto eksterior",
-        "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
+        "note": "Foto prototipe model terkait; bukan dokumentasi unit milik ANANTALIA TRANS.",
+        "url": "https://commons.wikimedia.org/wiki/File:2022_Mitsubishi_Xpander_Cross_(Indonesia)_front_view.jpg",
+        "license": "CC BY-SA 4.0",
+        "credit": "Andra Febrian"
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Foto referensi Mitsubishi Xpander Cross; sumber dan lisensi tersedia pada detail"
     },
     {
       "id": "fleet-26-toyota-innova-reborn",
@@ -990,7 +1075,8 @@
         "query": "Toyota Innova Reborn mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Innova Reborn belum tersedia"
     },
     {
       "id": "fleet-27-toyota-new-innova-reborn-facelift",
@@ -1028,7 +1114,8 @@
         "query": "Toyota New Innova Reborn Facelift mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota New Innova Reborn Facelift belum tersedia"
     },
     {
       "id": "fleet-28-toyota-grand-new-innova",
@@ -1066,7 +1153,8 @@
         "query": "Toyota Grand New Innova mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Grand New Innova belum tersedia"
     },
     {
       "id": "fleet-29-toyota-raize",
@@ -1104,7 +1192,8 @@
         "query": "Toyota Raize mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Raize belum tersedia"
     },
     {
       "id": "fleet-30-wuling-binguo-ev",
@@ -1142,7 +1231,8 @@
         "query": "Wuling Binguo EV mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Wuling Binguo EV belum tersedia"
     },
     {
       "id": "fleet-31-wuling-cloud-ev",
@@ -1180,7 +1270,8 @@
         "query": "Wuling Cloud EV mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Wuling Cloud EV belum tersedia"
     },
     {
       "id": "fleet-32-toyota-all-new-innova-zenix",
@@ -1218,7 +1309,8 @@
         "query": "Toyota All New Innova Zenix mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota All New Innova Zenix belum tersedia"
     },
     {
       "id": "fleet-33-byd-m6",
@@ -1256,7 +1348,8 @@
         "query": "BYD M6 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto BYD M6 belum tersedia"
     },
     {
       "id": "fleet-34-toyota-all-new-innova-zenix-hybrid",
@@ -1294,7 +1387,8 @@
         "query": "Toyota All New Innova Zenix Hybrid mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota All New Innova Zenix Hybrid belum tersedia"
     },
     {
       "id": "fleet-35-toyota-fortuner-2019",
@@ -1332,7 +1426,8 @@
         "query": "Toyota Fortuner 2019 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Fortuner 2019 belum tersedia"
     },
     {
       "id": "fleet-36-toyota-new-fortuner-vrz",
@@ -1370,7 +1465,8 @@
         "query": "Toyota New Fortuner VRZ mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota New Fortuner VRZ belum tersedia"
     },
     {
       "id": "fleet-37-hyundai-h1",
@@ -1408,7 +1504,8 @@
         "query": "Hyundai H1 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Hyundai H1 belum tersedia"
     },
     {
       "id": "fleet-38-toyota-hiace-premio",
@@ -1446,7 +1543,8 @@
         "query": "Toyota Hiace Premio mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Hiace Premio belum tersedia"
     },
     {
       "id": "fleet-39-toyota-grand-new-fortuner",
@@ -1484,7 +1582,8 @@
         "query": "Toyota Grand New Fortuner mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Grand New Fortuner belum tersedia"
     },
     {
       "id": "fleet-40-mitsubishi-all-new-pajero",
@@ -1522,7 +1621,8 @@
         "query": "Mitsubishi All New Pajero mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Mitsubishi All New Pajero belum tersedia"
     },
     {
       "id": "fleet-41-toyota-new-fortuner-gr-2023",
@@ -1560,7 +1660,8 @@
         "query": "Toyota New Fortuner GR 2023 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota New Fortuner GR 2023 belum tersedia"
     },
     {
       "id": "fleet-42-toyota-all-new-camry",
@@ -1598,7 +1699,8 @@
         "query": "Toyota All New Camry mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota All New Camry belum tersedia"
     },
     {
       "id": "fleet-43-byd-denza-d9",
@@ -1636,7 +1738,8 @@
         "query": "BYD Denza D9 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto BYD Denza D9 belum tersedia"
     },
     {
       "id": "fleet-44-toyota-all-new-alphard",
@@ -1674,7 +1777,8 @@
         "query": "Toyota All New Alphard mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota All New Alphard belum tersedia"
     },
     {
       "id": "fleet-45-toyota-hiace-premio-luxury",
@@ -1712,7 +1816,8 @@
         "query": "Toyota Hiace Premio Luxury mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Hiace Premio Luxury belum tersedia"
     },
     {
       "id": "fleet-46-toyota-new-alphard-2024-hybrid",
@@ -1750,7 +1855,8 @@
         "query": "Toyota New Alphard 2024 Hybrid mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota New Alphard 2024 Hybrid belum tersedia"
     },
     {
       "id": "fleet-47-toyota-hiace-commuter",
@@ -1788,7 +1894,8 @@
         "query": "Toyota Hiace Commuter mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Hiace Commuter belum tersedia"
     },
     {
       "id": "fleet-48-toyota-all-new-alphard-transformer",
@@ -1826,7 +1933,8 @@
         "query": "Toyota All New Alphard Transformer mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota All New Alphard Transformer belum tersedia"
     },
     {
       "id": "fleet-49-toyota-all-new-alphard-transformer-2022",
@@ -1864,7 +1972,8 @@
         "query": "Toyota All New Alphard Transformer 2022 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota All New Alphard Transformer 2022 belum tersedia"
     },
     {
       "id": "fleet-50-wuling-confero-db",
@@ -1902,7 +2011,8 @@
         "query": "Wuling Confero DB mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Wuling Confero DB belum tersedia"
     },
     {
       "id": "fleet-51-chevrolet-spin",
@@ -1940,7 +2050,8 @@
         "query": "Chevrolet Spin mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Chevrolet Spin belum tersedia"
     },
     {
       "id": "fleet-52-byd-atto-1",
@@ -1978,7 +2089,8 @@
         "query": "BYD Atto 1 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto BYD Atto 1 belum tersedia"
     },
     {
       "id": "fleet-53-toyota-all-new-veloz-2021",
@@ -2016,7 +2128,8 @@
         "query": "Toyota All New Veloz 2021 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota All New Veloz 2021 belum tersedia"
     },
     {
       "id": "fleet-54-toyota-veloz-2022",
@@ -2054,7 +2167,8 @@
         "query": "Toyota Veloz 2022 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Veloz 2022 belum tersedia"
     },
     {
       "id": "fleet-55-vinfast-e34",
@@ -2092,7 +2206,8 @@
         "query": "VinFast E34 mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto VinFast E34 belum tersedia"
     },
     {
       "id": "fleet-56-aletra-l8-ev",
@@ -2130,7 +2245,8 @@
         "query": "Aletra L8 EV mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Aletra L8 EV belum tersedia"
     },
     {
       "id": "fleet-57-toyota-voxy",
@@ -2168,7 +2284,8 @@
         "query": "Toyota Voxy mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota Voxy belum tersedia"
     },
     {
       "id": "fleet-58-mitsubishi-new-pajero-dakar",
@@ -2206,7 +2323,8 @@
         "query": "Mitsubishi New Pajero Dakar mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Mitsubishi New Pajero Dakar belum tersedia"
     },
     {
       "id": "fleet-59-toyota-new-vellfire",
@@ -2244,7 +2362,8 @@
         "query": "Toyota New Vellfire mobil Indonesia foto eksterior",
         "note": "Pilih gambar dari sumber yang sesuai dan periksa lisensinya sebelum digunakan."
       },
-      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai."
+      "imageNote": "Placeholder; gunakan imageSearchUrl untuk mencari gambar yang sesuai.",
+      "imageAlt": "Ilustrasi kendaraan; foto Toyota New Vellfire belum tersedia"
     },
     {
       "id": "fleet-60-isuzu-elf-long-19-seat",
@@ -2283,7 +2402,8 @@
         "note": "Pilih foto Mercedes-Benz Sprinter yang sesuai dan periksa izin penggunaannya."
       },
       "imageNote": "Placeholder lokal; buka imageSearchUrl untuk mencari foto Mercedes-Benz yang sesuai.",
-      "vehicleExample": "Mercedes-Benz Sprinter Minibus"
+      "vehicleExample": "Mercedes-Benz Sprinter Minibus",
+      "imageAlt": "Ilustrasi kendaraan; foto Isuzu ELF Long 19 Seat belum tersedia"
     },
     {
       "id": "fleet-61-kendaraan-kapasitas-10-20-seat",
@@ -2322,7 +2442,8 @@
         "note": "Pilih foto dari sumber yang sesuai dan periksa izin penggunaannya sebelum digunakan."
       },
       "imageNote": "Placeholder lokal; gunakan imageSearchUrl untuk mencari foto Mercedes-Benz yang sesuai.",
-      "vehicleExample": "Mercedes-Benz Sprinter Minibus"
+      "vehicleExample": "Mercedes-Benz Sprinter Minibus",
+      "imageAlt": "Ilustrasi kendaraan; foto Mercedes-Benz Sprinter Minibus belum tersedia"
     },
     {
       "id": "fleet-62-kendaraan-kapasitas-25-35-seat",
@@ -2361,7 +2482,8 @@
         "note": "Pilih foto dari sumber yang sesuai dan periksa izin penggunaannya sebelum digunakan."
       },
       "imageNote": "Placeholder lokal; gunakan imageSearchUrl untuk mencari foto Mercedes-Benz yang sesuai.",
-      "vehicleExample": "Mercedes-Benz OF 917 Bus Medium"
+      "vehicleExample": "Mercedes-Benz OF 917 Bus Medium",
+      "imageAlt": "Ilustrasi kendaraan; foto Mercedes-Benz OF 917 Bus Medium belum tersedia"
     },
     {
       "id": "fleet-63-kendaraan-kapasitas-40-59-seat",
@@ -2400,7 +2522,8 @@
         "note": "Pilih foto dari sumber yang sesuai dan periksa izin penggunaannya sebelum digunakan."
       },
       "imageNote": "Placeholder lokal; gunakan imageSearchUrl untuk mencari foto Mercedes-Benz yang sesuai.",
-      "vehicleExample": "Mercedes-Benz OH 1626 Bus Besar"
+      "vehicleExample": "Mercedes-Benz OH 1626 Bus Besar",
+      "imageAlt": "Ilustrasi kendaraan; foto Mercedes-Benz OH 1626 Bus Besar belum tersedia"
     }
   ],
   "imagePolicy": {

@@ -1,14 +1,18 @@
-# Validasi
+# Pemeriksaan Proyek
 
 ## Perintah
 
 Dari root proyek jalankan:
 
-`powershell -NoProfile -ExecutionPolicy Bypass -File tests/validate.ps1`
+```powershell
+npm ci
+npm run build:css
+npm run test:stabilization
+powershell -NoProfile -ExecutionPolicy Bypass -File tests/validate.ps1
+```
 
-Skrip memeriksa lima halaman, judul, shell dan tombol kembali ke atas tunggal, dua logo lokal per halaman, path lokal, target fragmen, ID duplikat, keseimbangan CSS, serta sintaks JavaScript inline dan file lokal. Node.js harus tersedia.
+`test:stabilization` memeriksa JSON dan 63 ID unik, tidak ada kartu armada duplikat di HTML, satu stylesheet Material Symbols per halaman, stylesheet Tailwind lokal tanpa CDN, cakupan class terhadap CSS terkompilasi, state hover/focus, dan breakpoint 640/768/1024px.
 
-## Hasil pemeriksaan terakhir sebelum dokumentasi ini
+`tests/validate.ps1` memeriksa lima halaman, judul, navigasi dan tombol top, logo serta path lokal, target fragmen, ID duplikat, CSS seimbang, dan sintaks JavaScript inline/file yang dicakup.
 
-LULUS pada lima halaman. Tidak ada `href="#"`; label legal tetap berupa teks biasa sampai URL resmi tersedia. Pemeriksaan Chrome dan keterbatasan CDN dirangkum di `docs/visual-validation.md`.
-
+Kedua perintah merupakan tes otomatis; keduanya tidak menggantikan uji browser. Interaksi, viewport desktop/mobile, temuan bisnis, dan batas run terakhir dicatat di `docs/stabilization-report.md` serta `docs/visual-validation.md`.
