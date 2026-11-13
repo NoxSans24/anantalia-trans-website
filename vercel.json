@@ -5,11 +5,11 @@
   "rewrites": [
     {
       "source": "/api/v1/public/:path*",
-      "destination": "https://GANTI-DENGAN-URL-BACKEND-RENDER.onrender.com/api/v1/public/:path*"
+      "destination": "https://anantalia-trans-backend.onrender.com/api/v1/public/:path*"
     },
     {
       "source": "/health",
-      "destination": "https://GANTI-DENGAN-URL-BACKEND-RENDER.onrender.com/health"
+      "destination": "https://anantalia-trans-backend.onrender.com/health"
     }
   ],
   "headers": [
