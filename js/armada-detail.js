@@ -5,6 +5,8 @@
   const search = document.getElementById('fleet-search-input');
   const capacityFilter = document.getElementById('fleet-capacity-filter');
   const transmissionFilter = document.getElementById('fleet-transmission-filter');
+  const sortSelect = document.getElementById('fleet-sort-select');
+  const activeChipsContainer = document.getElementById('active-filter-chips');
   const clearSearch = document.getElementById('clear-search-btn');
   const counter = document.getElementById('inventory-counter-text');
   const viewToggle = document.getElementById('fleet-view-toggle');
@@ -16,18 +18,11 @@
 
   const categoryActive = ['bg-surface-mint', 'text-primary', 'shadow-sm', 'border-primary/20'];
   const categoryIdle = ['bg-surface-card', 'text-on-surface-variant', 'border-border-subtle'];
-  const recommendedVehicleIds = new Set([
-    'fleet-01-toyota-calya',
-    'fleet-02-toyota-grand-new-avanza',
-    'fleet-15-mitsubishi-xpander',
-    'fleet-32-toyota-all-new-innova-zenix',
-    'fleet-44-toyota-all-new-alphard',
-    'fleet-38-toyota-hiace-premio'
-  ]);
   let records = [];
   let selectedCategory = 'all';
   let selectedCapacity = 'all';
   let selectedTransmission = 'all';
+  let selectedSort = 'default';
   let query = '';
   let showAllVehicles = false;
 
@@ -38,23 +33,36 @@
     return element;
   };
 
+  const renderSkeletonCards = () => {
+    const skeletons = Array.from({ length: 6 }, () => {
+      const card = make('div', 'fleet-skeleton-card');
+      card.setAttribute('aria-hidden', 'true');
+      const media = make('div', 'fleet-skeleton-media shimmer-active');
+      const body = make('div', 'p-5 flex flex-col gap-3');
+      const lineTitle = make('div', 'fleet-skeleton-line w-3/4 h-5 shimmer-active');
+      const lineSub = make('div', 'fleet-skeleton-line w-1/2 h-3.5 shimmer-active');
+      const lineBtn = make('div', 'fleet-skeleton-line w-full h-10 mt-2 shimmer-active');
+      body.append(lineTitle, lineSub, lineBtn);
+      card.append(media, body);
+      return card;
+    });
+    grid.replaceChildren(...skeletons);
+  };
+  renderSkeletonCards();
+
+  const parseCapacityNum = (val) => {
+    if (!val) return 0;
+    const match = String(val).match(/\d+/);
+    return match ? parseInt(match[0], 10) : 0;
+  };
+
   const buildCard = (record) => {
     const card = make('article', 'fleet-item fleet-catalogue-card bg-surface-card rounded-2xl shadow-sm border border-border-subtle/60 overflow-hidden group card-visible');
     card.dataset.vehicleId = record.id;
     card.dataset.cat = record.category;
     card.dataset.model = `${record.name} ${record.category}`;
     for (const [key, value] of Object.entries({
-      entryType: record.entryType, verificationStatus: record.verificationStatus,
-      isDummy: String(record.isDummy), source: record.source, category: record.category,
-      description: record.description, features: record.features, rentalTerms: record.rentalTerms,
-      useCase: record.useCase, capacity: record.capacity, transmission: record.transmission,
-      fuel: record.fuel, cityTariff: record.cityTariff, cityTariffPackage: record.cityTariffPackage,
-      outOfCityTariff: record.outOfCityTariff, outOfCityTariffPackage: record.outOfCityTariffPackage,
-      availability: record.availability, imageSearchUrl: record.imageSearchUrl,
-      imageNote: record.imageNote, imageSourceProvider: record.imageSource?.provider,
-      imageSourceUrl: record.imageSource?.url, imageLicense: record.imageSource?.license,
-      imageCredit: record.imageSource?.credit, imageSourceNote: record.imageSource?.note,
-      informationSourceUrl: record.informationSourceUrl
+      category: record.category, capacity: record.capacity,
     })) {
       if (value !== undefined && value !== null) card.dataset[key] = Array.isArray(value) ? value.join(' · ') : String(value);
     }
@@ -72,9 +80,6 @@
     imageWrap.append(image);
     const content = make('div', 'fleet-card-content');
     content.append(make('h2', 'fleet-card-name', record.name));
-    const priceBlock = make('div', 'fleet-card-price-block');
-    priceBlock.append(make('span', 'fleet-card-price-label', 'Tarif dalam kota'), make('span', 'fleet-card-price', record.cityTariff || 'Belum tersedia'));
-    content.append(priceBlock);
     const button = make('button', 'toggle-detail-btn');
     button.type = 'button';
     button.setAttribute('aria-haspopup', 'dialog');
@@ -91,6 +96,7 @@
   };
 
   const renderFilters = () => {
+    transmissionFilter.closest('label')?.setAttribute('hidden', '');
     const all = make('button', `category-filter-btn px-4 py-1.5 rounded-full font-label-sm text-label-sm transition-all duration-200 ${categoryActive.join(' ')} active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/30`, 'Semua');
     all.type = 'button'; all.dataset.category = 'all'; all.setAttribute('role', 'tab'); all.setAttribute('aria-selected', 'true');
     filterList.replaceChildren(all);
@@ -110,38 +116,80 @@
     populateSelect(transmissionFilter, 'transmission', 'transmisi');
   };
 
+  const renderActiveChips = () => {
+    if (!activeChipsContainer) return;
+    activeChipsContainer.replaceChildren();
+    const chips = [];
+    if (selectedCategory !== 'all') {
+      chips.push({ label: `Kategori: ${selectedCategory}`, clear: () => activateCategory('all') });
+    }
+    if (selectedCapacity !== 'all') {
+      chips.push({ label: `Kapasitas: ${selectedCapacity}`, clear: () => { capacityFilter.value = 'all'; selectedCapacity = 'all'; update(); } });
+    }
+    if (query) {
+      chips.push({ label: `Pencarian: "${search.value.trim()}"`, clear: () => { search.value = ''; query = ''; update(); } });
+    }
+    if (selectedSort !== 'default') {
+      const sortLabel = sortSelect?.selectedOptions?.[0]?.textContent || selectedSort;
+      chips.push({ label: `Urutan: ${sortLabel}`, clear: () => { if (sortSelect) sortSelect.value = 'default'; selectedSort = 'default'; applySorting(); update(); } });
+    }
+    if (!chips.length) {
+      activeChipsContainer.classList.add('hidden');
+      return;
+    }
+    activeChipsContainer.classList.remove('hidden');
+    chips.forEach(({ label, clear }) => {
+      const btn = make('button', 'active-filter-chip');
+      btn.type = 'button';
+      btn.setAttribute('aria-label', `Hapus filter ${label}`);
+      btn.append(make('span', '', label));
+      const closeIcon = make('span', 'material-symbols-outlined text-[14px]', 'close');
+      closeIcon.setAttribute('aria-hidden', 'true');
+      btn.append(closeIcon);
+      btn.addEventListener('click', clear);
+      activeChipsContainer.append(btn);
+    });
+  };
+
+  const applySorting = () => {
+    const cards = Array.from(grid.querySelectorAll('.fleet-item'));
+    if (!cards.length) return;
+    const recordMap = new Map(records.map((r, i) => [r.id, { record: r, index: i }]));
+    cards.sort((a, b) => {
+      const itemA = recordMap.get(a.dataset.vehicleId);
+      const itemB = recordMap.get(b.dataset.vehicleId);
+      if (!itemA || !itemB) return 0;
+      if (selectedSort === 'name-asc') return itemA.record.name.localeCompare(itemB.record.name, 'id');
+      if (selectedSort === 'name-desc') return itemB.record.name.localeCompare(itemA.record.name, 'id');
+      if (selectedSort === 'capacity-asc') return parseCapacityNum(itemA.record.capacity) - parseCapacityNum(itemB.record.capacity);
+      if (selectedSort === 'capacity-desc') return parseCapacityNum(itemB.record.capacity) - parseCapacityNum(itemA.record.capacity);
+      return itemA.index - itemB.index;
+    });
+    grid.replaceChildren(...cards);
+  };
+
   const update = () => {
     let visible = 0;
-    const isRecommendedView = !showAllVehicles && selectedCategory === 'all' &&
-      selectedCapacity === 'all' && selectedTransmission === 'all' && !query;
-    grid.querySelectorAll('.fleet-item').forEach((card, index) => {
+    grid.querySelectorAll('.fleet-item').forEach((card) => {
       const matchesCategory = selectedCategory === 'all' || card.dataset.cat === selectedCategory;
       const matchesQuery = !query || card.dataset.model.toLocaleLowerCase('id').includes(query);
       const matchesCapacity = selectedCapacity === 'all' || card.dataset.capacity === selectedCapacity;
       const matchesTransmission = selectedTransmission === 'all' || card.dataset.transmission === selectedTransmission;
-      const matchesRecommendation = !isRecommendedView || recommendedVehicleIds.has(card.dataset.vehicleId);
-      const matches = matchesCategory && matchesQuery && matchesCapacity && matchesTransmission && matchesRecommendation;
+      const matches = matchesCategory && matchesQuery && matchesCapacity && matchesTransmission;
       card.classList.toggle('hidden', !matches);
       card.classList.toggle('card-visible', matches);
       card.classList.toggle('card-hidden', !matches);
       if (matches) visible += 1;
     });
-    counter.textContent = isRecommendedView
-      ? `${visible} mobil rekomendasi ditampilkan`
-      : `${visible} item katalog ditampilkan`;
+    counter.textContent = `${visible} model terverifikasi ditampilkan`;
     emptyState.classList.toggle('hidden', visible > 0);
     emptyState.classList.toggle('flex', visible === 0);
     grid.classList.toggle('hidden', visible === 0);
     clearSearch.classList.toggle('hidden', search.value.trim().length === 0);
     if (viewToggle) {
-      const canToggleDefaultView = selectedCategory === 'all' && selectedCapacity === 'all' &&
-        selectedTransmission === 'all' && !query;
-      viewToggle.hidden = !canToggleDefaultView || records.length <= recommendedVehicleIds.size;
-      viewToggle.setAttribute('aria-expanded', String(showAllVehicles));
-      viewToggle.textContent = showAllVehicles
-        ? 'Tampilkan rekomendasi saja'
-        : `Lihat semua armada (${records.length})`;
+      viewToggle.hidden = true;
     }
+    renderActiveChips();
   };
 
   const activateCategory = (category) => {
@@ -161,9 +209,12 @@
     query = '';
     capacityFilter.value = 'all';
     transmissionFilter.value = 'all';
+    if (sortSelect) sortSelect.value = 'default';
     selectedCapacity = 'all';
     selectedTransmission = 'all';
+    selectedSort = 'default';
     showAllVehicles = true;
+    applySorting();
     activateCategory('all');
   };
   filterList.addEventListener('click', (event) => {
@@ -183,6 +234,11 @@
   transmissionFilter.addEventListener('change', () => {
     selectedTransmission = transmissionFilter.value;
     showAllVehicles = true;
+    update();
+  });
+  sortSelect?.addEventListener('change', () => {
+    selectedSort = sortSelect.value;
+    applySorting();
     update();
   });
   clearSearch.addEventListener('click', () => { search.value = ''; query = ''; update(); search.focus(); });
@@ -206,27 +262,306 @@
   const status = document.getElementById('vehicle-detail-status-text');
   const sources = document.getElementById('vehicle-detail-sources');
   const detailFields = [
-    ['Kategori', 'category', 'category'], ['Kegunaan', 'useCase', 'route'],
-    ['Kapasitas', 'capacity', 'groups'], ['Transmisi', 'transmission', 'settings'],
-    ['Bahan bakar', 'fuel', 'local_gas_station'], ['Fitur', 'features', 'star'],
-    ['Tarif dalam kota', 'cityTariff', 'payments'], ['Paket dalam kota', 'cityTariffPackage', 'schedule'],
-    ['Tarif luar kota', 'outOfCityTariff', 'payments'], ['Paket luar kota', 'outOfCityTariffPackage', 'route'],
-    ['Ketersediaan', 'availability', 'event_available'], ['Fasilitas dan ketentuan', 'rentalTerms', 'rule'],
-    ['Catatan gambar', 'imageNote', 'image'], ['Sumber gambar', 'imageSourceProvider', 'travel_explore'],
-    ['Catatan sumber gambar', 'imageSourceNote', 'info']
+    ['Kategori', 'category', 'category'],
+    ['Kapasitas tempat duduk', 'capacity', 'groups'],
+    ['Jenis sewa terverifikasi', 'rentalTypes', 'key'],
   ];
   const categoryIcons = { 'City Car / EV': 'electric_car', 'MPV Standar': 'airport_shuttle', 'MPV Keluarga': 'family_restroom', Premium: 'directions_car', Minibus: 'airport_shuttle', 'Bus Medium': 'directions_bus', 'Bus Besar': 'directions_bus' };
+
+  // --- Booking form state ---
+  let activeRecord = null;
+  let bookingFormVisible = false;
+
+  /** Build the booking request form once and return it. */
+  const buildBookingForm = () => {
+    const section = make('section', 'vehicle-booking-form');
+    section.setAttribute('aria-label', 'Form permintaan sewa');
+    section.hidden = true;
+
+    const formTitle = make('h3', 'vehicle-booking-form-title');
+    formTitle.textContent = 'Ajukan permintaan sewa';
+
+    const notice = make('div', 'vehicle-booking-notice');
+    const noticeIcon = make('span', 'material-symbols-outlined', 'info');
+    noticeIcon.setAttribute('aria-hidden', 'true');
+    const noticeText = make('p', '');
+    noticeText.textContent = 'Konfirmasi ketersediaan dan tarif dilakukan oleh tim kami melalui WhatsApp resmi (+62 813-8333-3707).';
+    notice.append(noticeIcon, noticeText);
+
+    const form = document.createElement('form');
+    form.id = 'vehicle-booking-request-form';
+    form.noValidate = true;
+
+    const stepDefs = [
+      {
+        step: '1',
+        title: 'Data Pemesan & Kontak',
+        fields: [
+          { id: 'bk-name', label: 'Nama lengkap', type: 'text', name: 'customerName', required: true, placeholder: 'Contoh: Budi Santoso' },
+          { id: 'bk-phone', label: 'Nomor WhatsApp (E.164)', type: 'tel', name: 'whatsappPhone', required: true, placeholder: '+6281234567890' },
+        ],
+      },
+      {
+        step: '2',
+        title: 'Jadwal & Jenis Layanan Sewa',
+        fields: [
+          { id: 'bk-rental', label: 'Jenis sewa', type: 'select', name: 'rentalType', required: true },
+          { id: 'bk-start', label: 'Tanggal mulai sewa', type: 'date', name: 'startsOn', required: true },
+          { id: 'bk-end', label: 'Tanggal selesai sewa', type: 'date', name: 'endsOn', required: true },
+        ],
+        hasDurationPill: true,
+      },
+      {
+        step: '3',
+        title: 'Titik Penjemputan & Catatan',
+        fields: [
+          { id: 'bk-pickup', label: 'Lokasi jemput', type: 'text', name: 'pickupLocation', required: true, placeholder: 'Contoh: Bandara YIA / Stasiun Tugu' },
+          { id: 'bk-notes', label: 'Catatan tambahan', type: 'textarea', name: 'additionalNotes', required: false, placeholder: 'Kebutuhan khusus, jumlah penumpang, dll.' },
+        ],
+      },
+    ];
+
+    const durationSummary = make('div', 'booking-duration-pill');
+    durationSummary.id = 'booking-duration-summary';
+    durationSummary.hidden = true;
+
+    stepDefs.forEach(({ step, title: stepTitle, fields, hasDurationPill }) => {
+      const stepBox = make('div', 'booking-step-group');
+      const stepHeader = make('div', 'booking-step-header');
+      stepHeader.append(make('span', 'booking-step-badge', step), make('span', '', stepTitle));
+      stepBox.append(stepHeader);
+
+      fields.forEach(({ id, label, type, name, required, placeholder: ph }) => {
+        const group = make('div', 'vehicle-booking-field');
+        const lbl = document.createElement('label');
+        lbl.htmlFor = id;
+        lbl.className = 'vehicle-booking-label';
+        lbl.textContent = label + (required ? '' : ' (opsional)');
+        let control;
+        if (type === 'textarea') {
+          control = document.createElement('textarea');
+          control.rows = 2;
+          control.className = 'vehicle-booking-input';
+        } else if (type === 'select') {
+          control = document.createElement('select');
+          control.className = 'vehicle-booking-input';
+          control.add(new Option('Dengan Pengemudi (with_driver)', 'with_driver'));
+          control.add(new Option('Lepas Kunci (self_drive)', 'self_drive'));
+        } else {
+          control = document.createElement('input');
+          control.type = type;
+          control.className = 'vehicle-booking-input';
+        }
+        control.id = id;
+        control.name = name;
+        control.required = !!required;
+        if (ph) control.placeholder = ph;
+        const err = make('span', 'vehicle-booking-field-error');
+        err.setAttribute('role', 'alert');
+        err.hidden = true;
+        group.append(lbl, control, err);
+        stepBox.append(group);
+      });
+
+      if (hasDurationPill) {
+        stepBox.append(durationSummary);
+      }
+      form.append(stepBox);
+    });
+
+    const updateDurationPill = () => {
+      const startVal = form.querySelector('[name="startsOn"]')?.value;
+      const endVal = form.querySelector('[name="endsOn"]')?.value;
+      if (!startVal || !endVal || endVal < startVal) {
+        durationSummary.hidden = true;
+        return;
+      }
+      const startMs = new Date(`${startVal}T00:00:00`).getTime();
+      const endMs = new Date(`${endVal}T00:00:00`).getTime();
+      const diffDays = Math.floor((endMs - startMs) / 86400000) + 1;
+      if (diffDays > 0) {
+        durationSummary.textContent = `Estimasi durasi perjalanan: ${diffDays} hari sewa`;
+        durationSummary.hidden = false;
+      } else {
+        durationSummary.hidden = true;
+      }
+    };
+
+    form.querySelector('[name="startsOn"]')?.addEventListener('change', updateDurationPill);
+    form.querySelector('[name="endsOn"]')?.addEventListener('change', updateDurationPill);
+
+    const formStatus = make('p', 'vehicle-booking-status');
+    formStatus.setAttribute('role', 'status');
+    formStatus.hidden = true;
+
+    const formActions = make('div', 'vehicle-booking-actions');
+    const cancelBtn = make('button', 'vehicle-modal-secondary', 'Batal');
+    cancelBtn.type = 'button';
+    const submitBtn = make('button', 'vehicle-booking-submit', 'Kirim permintaan');
+    submitBtn.type = 'submit';
+    formActions.append(cancelBtn, submitBtn);
+
+    form.append(formStatus, formActions);
+    section.append(formTitle, notice, form);
+
+    // Success panel (shown after successful submission)
+    const successPanel = make('div', 'vehicle-booking-success');
+    successPanel.hidden = true;
+    const successIcon = make('span', 'material-symbols-outlined vehicle-booking-success-icon', 'check_circle');
+    successIcon.setAttribute('aria-hidden', 'true');
+    const successTitle = make('h3', 'vehicle-booking-success-title', 'Permintaan terkirim');
+    const successCode = make('p', 'vehicle-booking-success-code');
+    const successNote = make('p', 'vehicle-booking-success-note', 'Tim kami akan meninjau permintaan dan menghubungi Anda.');
+    successPanel.append(successIcon, successTitle, successCode, successNote);
+    section.append(successPanel);
+
+    // Form validation helper
+    const clearErrors = () => {
+      form.querySelectorAll('.vehicle-booking-field-error').forEach((el) => { el.textContent = ''; el.hidden = true; });
+    };
+
+    const validateForm = () => {
+      let valid = true;
+      const fields = form.querySelectorAll('[name]');
+      clearErrors();
+      fields.forEach((field) => {
+        const errEl = field.parentElement?.querySelector('.vehicle-booking-field-error');
+        if (field.required && !field.value.trim()) {
+          if (errEl) { errEl.textContent = 'Kolom ini wajib diisi.'; errEl.hidden = false; }
+          valid = false;
+        }
+      });
+      const nameField = form.querySelector('[name="customerName"]');
+      const nameErr = nameField?.parentElement?.querySelector('.vehicle-booking-field-error');
+      if (nameField?.value && nameField.value.trim().length > 150) {
+        if (nameErr) { nameErr.textContent = 'Nama maksimal 150 karakter.'; nameErr.hidden = false; }
+        valid = false;
+      }
+      const phoneField = form.querySelector('[name="whatsappPhone"]');
+      const phoneErr = phoneField?.parentElement?.querySelector('.vehicle-booking-field-error');
+      if (phoneField?.value && !/^\+[1-9]\d{6,14}$/.test(phoneField.value.trim())) {
+        if (phoneErr) { phoneErr.textContent = 'Format nomor harus E.164: +6281234567890 (awali dengan +).'; phoneErr.hidden = false; }
+        valid = false;
+      }
+      const pickupField = form.querySelector('[name="pickupLocation"]');
+      const pickupErr = pickupField?.parentElement?.querySelector('.vehicle-booking-field-error');
+      if (pickupField?.value && (pickupField.value.trim().length < 3 || pickupField.value.trim().length > 500)) {
+        if (pickupErr) { pickupErr.textContent = 'Lokasi jemput harus 3 hingga 500 karakter.'; pickupErr.hidden = false; }
+        valid = false;
+      }
+      const startField = form.querySelector('[name="startsOn"]');
+      const endField = form.querySelector('[name="endsOn"]');
+      const endErr = endField?.parentElement?.querySelector('.vehicle-booking-field-error');
+      if (startField?.value && endField?.value && endField.value < startField.value) {
+        if (endErr) { endErr.textContent = 'Tanggal selesai tidak boleh sebelum tanggal mulai.'; endErr.hidden = false; }
+        valid = false;
+      }
+      return valid;
+    };
+
+    // Form submit handler
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      clearErrors();
+      formStatus.hidden = true;
+
+      const data = {};
+      new FormData(form).forEach((value, key) => { data[key] = String(value).trim(); });
+      if (!validateForm(data)) return;
+
+      submitBtn.disabled = true;
+      formStatus.textContent = 'Mengirim permintaan…';
+      formStatus.hidden = false;
+
+      try {
+        const payload = {
+          customerName: data.customerName,
+          whatsappPhone: data.whatsappPhone,
+          categoryId: activeRecord?.categoryId,
+          modelId: activeRecord?.id,
+          rentalType: data.rentalType,
+          startsOn: data.startsOn,
+          endsOn: data.endsOn,
+          pickupLocation: data.pickupLocation,
+          additionalNotes: data.additionalNotes || undefined,
+        };
+        const result = await window.AnantaliaApi.submitBookingRequest(payload);
+        form.hidden = true;
+        successCode.textContent = `Kode permintaan Anda: ${result?.bookingCode ?? '—'}`;
+        successNote.textContent = result?.notice || 'Permintaan tersimpan dan menunggu konfirmasi admin.';
+        successPanel.hidden = false;
+      } catch (error) {
+        formStatus.textContent = error.message || 'Permintaan gagal dikirim. Coba lagi.';
+        formStatus.setAttribute('role', 'alert');
+        submitBtn.disabled = false;
+      }
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      section.hidden = true;
+      bookingFormVisible = false;
+      const actionsBar = dialog.querySelector('.vehicle-detail-actions');
+      if (actionsBar) actionsBar.hidden = false;
+    });
+
+    return { section, successPanel, form, formStatus, submitBtn, durationSummary };
+  };
+
+  const bookingForm = buildBookingForm();
+  const detailContent = dialog.querySelector('.vehicle-detail-content');
+  if (detailContent) {
+    const actionsBar = detailContent.querySelector('.vehicle-detail-actions');
+    if (actionsBar) {
+      actionsBar.before(bookingForm.section);
+    } else {
+      detailContent.append(bookingForm.section);
+    }
+  }
+
+  const actionsBar = dialog.querySelector('.vehicle-detail-actions');
+  const requestBookingBtn = make('button', 'vehicle-booking-trigger', 'Ajukan Sewa');
+  requestBookingBtn.type = 'button';
+  requestBookingBtn.setAttribute('aria-controls', 'vehicle-booking-request-form');
+  if (actionsBar) actionsBar.append(requestBookingBtn);
+
+  requestBookingBtn.addEventListener('click', () => {
+    bookingForm.form.reset();
+    bookingForm.durationSummary.hidden = true;
+    const rentalSelect = bookingForm.form.querySelector('[name="rentalType"]');
+    if (rentalSelect && activeRecord) {
+      const supported = Array.isArray(activeRecord.rentalTypes) ? activeRecord.rentalTypes : [];
+      [...rentalSelect.options].forEach((option) => { option.hidden = supported.length > 0 && !supported.includes(option.value); option.disabled = option.hidden; });
+      const first = [...rentalSelect.options].find((option) => !option.disabled);
+      if (first) rentalSelect.value = first.value;
+    }
+    bookingForm.form.querySelectorAll('.vehicle-booking-field-error').forEach((el) => { el.textContent = ''; el.hidden = true; });
+    bookingForm.formStatus.hidden = true;
+    bookingForm.formStatus.textContent = '';
+    bookingForm.submitBtn.disabled = false;
+    bookingForm.form.hidden = false;
+    bookingForm.successPanel.hidden = true;
+    bookingFormVisible = true;
+    bookingForm.section.hidden = false;
+    actionsBar.hidden = true;
+    bookingForm.section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
   const openDetails = (record) => {
+    activeRecord = record;
+    bookingFormVisible = false;
+    bookingForm.section.hidden = true;
+    bookingForm.form.hidden = false;
+    bookingForm.successPanel.hidden = true;
+    if (actionsBar) actionsBar.hidden = false;
+
     title.textContent = record.name;
-    description.textContent = record.description || 'Rincian belum tersedia pada data prototipe.';
+    description.textContent = 'Model ini diverifikasi untuk katalog publik. Informasi ini tidak menyatakan unit tersedia atau tarif sewa.';
     descriptionIcon.textContent = categoryIcons[record.category] || 'info';
-    status.textContent = record.isDummy ? 'Data dummy untuk prototipe' : (record.verificationStatus || 'Status belum tersedia');
+    status.textContent = 'Data model terverifikasi dari server';
     specs.replaceChildren();
     detailFields.forEach(([label, key, iconName]) => {
       let value = record[key];
       if (Array.isArray(value)) value = value.join(' · ');
-      if (key === 'imageSourceProvider') value = record.imageSource?.provider;
-      if (key === 'imageSourceNote') value = record.imageSource?.note;
       if (!value) return;
       const item = make('li');
       const icon = make('span', 'material-symbols-outlined vehicle-detail-spec-icon', iconName); icon.setAttribute('aria-hidden', 'true');
@@ -234,24 +569,19 @@
       specs.append(item);
     });
     sources.replaceChildren();
-    const links = [
-      ['Cari gambar di Google', record.imageSearchUrl, 'image_search'],
-      [record.imageSource?.license ? `Sumber foto · ${record.imageSource.license}${record.imageSource.credit ? ` · ${record.imageSource.credit}` : ''}` : 'Sumber foto', record.imageSource?.url, 'photo_library'],
-      ['Sumber informasi', record.informationSourceUrl, 'open_in_new']
-    ].filter(([, href]) => href);
-    links.forEach(([label, href, iconName]) => {
-      const link = make('a'); link.href = href; link.target = '_blank'; link.rel = 'noopener noreferrer';
-      const icon = make('span', 'material-symbols-outlined', iconName); icon.setAttribute('aria-hidden', 'true');
-      link.append(icon, make('span', '', label)); sources.append(link);
-    });
-    sources.hidden = links.length === 0;
+    sources.hidden = true;
     image.hidden = false; placeholder.hidden = true; image.removeAttribute('src');
     image.src = record.image || '../assets/placeholder-vehicle.svg';
     image.alt = record.imageAlt || `Ilustrasi kendaraan ${record.name}`;
     const showPlaceholder = () => { image.hidden = true; placeholder.hidden = false; };
     image.onerror = showPlaceholder;
-    const message = encodeURIComponent(`Halo ANANTALIA TRANS, saya ingin bertanya tentang ${record.name}.`);
-    whatsapp.href = `https://wa.me/6281383333707?text=${message}`;
+    if (whatsapp) {
+      const waMsg = `Halo ANANTALIA TRANS, saya ingin menanyakan ketersediaan dan informasi sewa unit ${record.name} (${record.category}).`;
+      whatsapp.href = `https://api.whatsapp.com/send/?phone=6281383333707&text=${encodeURIComponent(waMsg)}&type=phone_number&app_absent=0`;
+      whatsapp.target = '_blank';
+      whatsapp.rel = 'noopener noreferrer';
+      whatsapp.hidden = false;
+    }
     dialog.showModal();
   };
   grid.addEventListener('click', (event) => {
@@ -280,17 +610,50 @@
     dialog.classList.remove('is-closing');
   });
 
-  fetch('../fleet.json')
-    .then(response => { if (!response.ok) throw new Error(`HTTP ${response.status}`); return response.json(); })
-    .then(payload => {
-      if (!Array.isArray(payload.fleet) || payload.fleet.length !== 63) throw new Error('Data katalog tidak berisi 63 unit.');
-      records = payload.fleet;
+  const applyUrlQueryParams = () => {
+    const params = new URLSearchParams(window.location.search);
+    const paramQ = params.get('q');
+    const paramCategory = params.get('category');
+    const paramCapacity = params.get('capacity');
+    if (paramQ) {
+      search.value = paramQ.trim();
+      query = search.value.toLocaleLowerCase('id');
+    }
+    if (paramCapacity && [...capacityFilter.options].some(opt => opt.value === paramCapacity)) {
+      capacityFilter.value = paramCapacity;
+      selectedCapacity = paramCapacity;
+    }
+    if (paramCategory && paramCategory !== 'all') {
+      const matchingBtn = [...filterList.querySelectorAll('.category-filter-btn')]
+        .find(btn => btn.dataset.category?.toLocaleLowerCase('id') === paramCategory.toLocaleLowerCase('id'));
+      if (matchingBtn) {
+        activateCategory(matchingBtn.dataset.category);
+        return;
+      }
+    }
+    update();
+  };
+
+  // Optional capacity guide quick-filter buttons
+  document.querySelectorAll('[data-quick-category]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetCat = btn.getAttribute('data-quick-category');
+      if (!targetCat) return;
+      activateCategory(targetCat);
+      filterPanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  window.AnantaliaApi.getPublicFleetCatalog()
+    .then(items => {
+      records = items;
       renderFilters();
       grid.replaceChildren(...records.map(buildCard));
-      update();
+      applyUrlQueryParams();
     })
     .catch(error => {
       console.error('Katalog armada gagal dimuat:', error);
+      grid.replaceChildren();
       counter.textContent = 'Katalog belum dapat dimuat';
       emptyState.classList.remove('hidden'); emptyState.classList.add('flex');
       const heading = emptyState.querySelector('h3');

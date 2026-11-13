@@ -6,7 +6,8 @@
     "build:css": "tailwindcss --config ./js/tailwind-config.js --input ./css/tailwind.input.css --output ./css/tailwind.generated.css --minify",
     "watch:css": "tailwindcss --config ./js/tailwind-config.js --input ./css/tailwind.input.css --output ./css/tailwind.generated.css --watch",
     "serve": "node ./scripts/serve.js",
-    "test:stabilization": "node ./tests/stabilization.js"
+    "test:stabilization": "node ./tests/stabilization.js",
+    "build:figcraft": "node ./scripts/build-figcraft.js"
   },
   "devDependencies": {
     "@tailwindcss/forms": "0.5.9",

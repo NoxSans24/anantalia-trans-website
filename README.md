@@ -7,14 +7,15 @@ Situs statis multi-halaman untuk ANANTALIA TRANS. Informasi bisnis, layanan, kon
 - `index.html` — Beranda
 - `pages/tentang-kami.html` — Tentang Kami
 - `pages/layanan.html` — Layanan dan filter kategori
-- `pages/armada.html` — Katalog armada yang dibuka dengan enam pilihan rekomendasi; tombol menampilkan seluruh katalog. Pencarian serta filter kategori, kapasitas, dan transmisi bekerja bersama; dialog detail tetap tersedia.
+- `pages/armada.html` — Katalog kategori, model, kapasitas, dan jenis sewa yang diterima dari public fleet API. Data tarif dan ketersediaan tidak ditampilkan.
 - `pages/pusat-bantuan.html` — FAQ, peta ilustratif, filter area, dan dialog lokasi
 
 ## Teknologi dan sumber data
 
 - HTML, CSS, dan JavaScript vanilla.
 - Tailwind CSS 3.4.17 dikompilasi ke `css/tailwind.generated.css` secara lokal. Halaman tidak memuat Tailwind CDN.
-- `fleet.json` adalah satu-satunya sumber katalog 63 entri armada, termasuk metadata gambar dan tautan sumbernya. Seluruh data tarif dan spesifikasi tetap ditandai sebagai dummy.
+- `fleet.json` menyimpan data prototipe lama untuk arsip dan tidak dimuat sebagai katalog situs.
+- Katalog publik mengambil data dari `/api/v1/public/*`. Server preview meneruskan route tersebut ke backend loopback pada `127.0.0.1:3000`; atur `BACKEND_API_ORIGIN` hanya ke origin loopback bila port backend berbeda.
 - Manrope dan satu stylesheet Material Symbols per halaman diambil dari Google Fonts; font memerlukan koneksi internet.
 - Foto dari sumber eksternal dapat tidak tersedia. Kartu Armada memakai `assets/placeholder-vehicle.svg` sebagai fallback.
 
@@ -28,7 +29,7 @@ npm run build:css
 npm run serve
 ```
 
-Buka `http://127.0.0.1:4173`. `npm run watch:css` tersedia ketika mengubah utility class.
+Buka `http://127.0.0.1:4173`. Jalankan backend secara terpisah pada `127.0.0.1:3000`; `npm run watch:css` tersedia ketika mengubah utility class.
 
 ## Pemeriksaan
 
@@ -42,7 +43,7 @@ Pemeriksaan statis dan interaksi browser memiliki cakupan yang berbeda. Hasil pe
 
 ## Pemeliharaan
 
-- Perbarui daftar dan metadata armada hanya di `fleet.json`; jangan menambahkan kembali kartu katalog statis di HTML.
+- Ubah katalog armada melalui API admin setelah sumber model dan kategori diverifikasi; jangan mengaktifkan model publik sebelum persetujuan.
 - Setelah menambah atau mengubah utility class di HTML/JavaScript, jalankan `npm run build:css` dan `npm run test:stabilization`.
 - Konfirmasi klaim, nomor kontak/WhatsApp, alamat, kebijakan, tarif, jangkauan, fasilitas, dan status operasional kepada pemilik sebelum dipublikasikan sebagai informasi faktual.
 - URL Syarat & Ketentuan dan Kebijakan Privasi belum tersedia; labelnya tetap berupa teks biasa.

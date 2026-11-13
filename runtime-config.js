@@ -1,0 +1,1 @@
+window.ANANTALIA_API_BASE_URL = window.ANANTALIA_API_BASE_URL || "";

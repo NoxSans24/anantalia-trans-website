@@ -15,6 +15,8 @@ if (!fleet.isDummy || fleet.fleet.some(record => !record.isDummy)) fail('Data du
 const armada = htmlByPath.get('pages/armada.html');
 if (/<article\b[^>]*\bfleet-item/.test(armada)) fail('Kartu armada masih tersimpan statis di HTML.');
 if (!armada.includes('data-fleet-categories') || !armada.includes('fleet-cards-container')) fail('Hook render katalog tidak lengkap.');
+const fleetRenderer = fs.readFileSync(path.join(root, 'js/armada-detail.js'), 'utf8');
+if (!fleetRenderer.includes('window.AnantaliaApi.getPublicFleetCatalog()') || fleetRenderer.includes("fetch('../fleet.json')")) fail('Katalog publik harus memakai API terverifikasi, bukan fleet.json.');
 for (const [file, html] of htmlByPath) {
   if (/cdn\.tailwindcss\.com|tailwindcss@.*cdn/i.test(html)) fail(`Tailwind CDN masih dirujuk: ${file}`);
   const generatedLink = file === 'index.html' ? 'css/tailwind.generated.css' : '../css/tailwind.generated.css';
@@ -22,7 +24,7 @@ for (const [file, html] of htmlByPath) {
   const symbols = (html.match(/fonts\.googleapis\.com\/css2\?family=Material\+Symbols/g) || []).length;
   if (symbols !== 1) fail(`${file} memuat ${symbols} impor Material Symbols; diharapkan satu.`);
 }
-const stylesheet = postcss.parse(fs.readFileSync(path.join(root, 'css/tailwind.generated.css'), 'utf8'));
+const stylesheet = postcss.parse(['css/tailwind.generated.css', 'css/main.css', 'css/armada.css', 'css/layanan.css', 'css/pusat-bantuan.css'].map(file => fs.readFileSync(path.join(root, file), 'utf8')).join('\n'));
 const selectors = new Set();
 stylesheet.walkRules(rule => {
   try {
@@ -55,4 +57,4 @@ const css = fs.readFileSync(path.join(root, 'css/tailwind.generated.css'), 'utf8
 for (const marker of ['@media (min-width:640px)', '@media (min-width:768px)', '@media (min-width:1024px)', ':hover', ':focus']) {
   if (!css.includes(marker)) fail(`CSS terkompilasi tidak memuat state/breakpoint ${marker}.`);
 }
-if (!process.exitCode) console.log(`LULUS: ${pages.length} halaman, 63 ID armada, satu sumber JSON, tanpa Tailwind CDN, ${utilityTokens.size} token class dicakup, breakpoint/state CSS tersedia.`);
+if (!process.exitCode) console.log(`LULUS: ${pages.length} halaman, 63 ID prototipe yang diarsipkan (tidak dimuat situs), katalog memakai API, tanpa Tailwind CDN, ${utilityTokens.size} token class dicakup, breakpoint/state CSS tersedia.`);

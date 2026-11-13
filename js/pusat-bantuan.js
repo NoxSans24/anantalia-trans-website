@@ -1,6 +1,9 @@
 (() => {
   const items = Array.from(document.querySelectorAll('.faq-item'));
   const pendingClosures = new WeakMap();
+  const faqSearchInput = document.getElementById('faq-search-input');
+  const faqToggleAllBtn = document.getElementById('faq-toggle-all-btn');
+  const faqEmptyState = document.getElementById('faq-empty-state');
 
   const closeItem = (item) => {
     const trigger = item.querySelector('.faq-trigger');
@@ -44,6 +47,17 @@
     icon?.classList.add('rotate-180');
   };
 
+  const syncToggleAllButton = () => {
+    if (!faqToggleAllBtn) return;
+    const visibleItems = items.filter((item) => !item.hidden);
+    const allOpen = visibleItems.length > 0 && visibleItems.every((item) => item.getAttribute('data-state') === 'open');
+    faqToggleAllBtn.setAttribute('aria-pressed', String(allOpen));
+    const labelSpan = faqToggleAllBtn.querySelector('[data-faq-toggle-label]');
+    const iconSpan = faqToggleAllBtn.querySelector('.material-symbols-outlined');
+    if (labelSpan) labelSpan.textContent = allOpen ? 'Tutup Semua' : 'Buka Semua';
+    if (iconSpan) iconSpan.textContent = allOpen ? 'unfold_less' : 'unfold_more';
+  };
+
   items.forEach((item, index) => {
     const trigger = item.querySelector('.faq-trigger');
     const content = item.querySelector('.faq-content');
@@ -78,7 +92,34 @@
       });
       if (isOpen) closeItem(item);
       else openItem(item);
+      syncToggleAllButton();
     });
+  });
+
+  faqToggleAllBtn?.addEventListener('click', () => {
+    const visibleItems = items.filter((item) => !item.hidden);
+    const allOpen = visibleItems.length > 0 && visibleItems.every((item) => item.getAttribute('data-state') === 'open');
+    visibleItems.forEach((item) => {
+      if (allOpen) closeItem(item);
+      else openItem(item);
+    });
+    syncToggleAllButton();
+  });
+
+  faqSearchInput?.addEventListener('input', () => {
+    const q = faqSearchInput.value.trim().toLocaleLowerCase('id');
+    let visibleCount = 0;
+    items.forEach((item) => {
+      const text = (item.textContent || '').toLocaleLowerCase('id');
+      const matches = !q || text.includes(q);
+      item.hidden = !matches;
+      if (matches) {
+        visibleCount += 1;
+        if (q) openItem(item);
+      }
+    });
+    if (faqEmptyState) faqEmptyState.hidden = visibleCount > 0;
+    syncToggleAllButton();
   });
 
   const reveals = document.querySelectorAll('.reveal-on-scroll');

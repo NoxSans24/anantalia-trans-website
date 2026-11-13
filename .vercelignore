@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.codex/
+docs/
+tests/
+scripts/
+backups/
+playwright-report/
+test-results/
+anantalia_trans_figcraft_kit/
+fleet.json
+*.log
+*.zip
