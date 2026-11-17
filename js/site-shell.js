@@ -197,11 +197,11 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;">
           <input name="phone" type="text" placeholder="Nomor WhatsApp / Telepon" style="padding:0.6rem 0.75rem;border:1px solid #d1d5db;border-radius:8px;" />
           <select name="category" style="padding:0.6rem 0.75rem;border:1px solid #d1d5db;border-radius:8px;background:#fff;">
-            <option value="pertanyaan">Pertanyaan Umum</option>
-            <option value="pemesanan">Pemesanan &amp; Armada</option>
-            <option value="harga">Penawaran Harga</option>
-            <option value="keluhan">Keluhan Layanan</option>
-            <option value="kerjasama">Kerja Sama / Korporat</option>
+            <option value="general">Pertanyaan Umum</option>
+            <option value="booking">Pemesanan &amp; Armada</option>
+            <option value="pricing">Penawaran Harga</option>
+            <option value="complaint">Keluhan Layanan</option>
+            <option value="partnership">Kerja Sama / Korporat</option>
           </select>
         </div>
         <input name="subject" type="text" required placeholder="Subjek Pesan *" style="padding:0.6rem 0.75rem;border:1px solid #d1d5db;border-radius:8px;" />
@@ -225,7 +225,7 @@
         senderName: String(fd.get('senderName') || '').trim(),
         senderEmail: String(fd.get('senderEmail') || '').trim(),
         phone: String(fd.get('phone') || '').trim(),
-        category: String(fd.get('category') || 'pertanyaan'),
+        category: String(fd.get('category') || 'general'),
         subject: String(fd.get('subject') || '').trim(),
         content: String(fd.get('content') || '').trim(),
         website: String(fd.get('website') || ''),
