@@ -576,8 +576,9 @@
     const showPlaceholder = () => { image.hidden = true; placeholder.hidden = false; };
     image.onerror = showPlaceholder;
     if (whatsapp) {
+      const waPhone = window.__anantaliaWaPhone || '6281383333707';
       const waMsg = `Halo ANANTALIA TRANS, saya ingin menanyakan ketersediaan dan informasi sewa unit ${record.name} (${record.category}).`;
-      whatsapp.href = `https://api.whatsapp.com/send/?phone=6281383333707&text=${encodeURIComponent(waMsg)}&type=phone_number&app_absent=0`;
+      whatsapp.href = `https://api.whatsapp.com/send/?phone=${waPhone}&text=${encodeURIComponent(waMsg)}&type=phone_number&app_absent=0`;
       whatsapp.target = '_blank';
       whatsapp.rel = 'noopener noreferrer';
       whatsapp.hidden = false;

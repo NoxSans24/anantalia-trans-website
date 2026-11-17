@@ -93,6 +93,20 @@
     return request('/api/v1/public/site-config');
   }
 
+  async function recordPageView({ path: pagePath, visitorToken, dnt = false } = {}) {
+    try {
+      const response = await fetch(`${baseUrl}/api/v1/public/analytics/pageview`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ path: pagePath, visitorToken, dnt }),
+        keepalive: true,
+      });
+      return response.ok ? response.json().catch(() => null) : null;
+    } catch {
+      return null;
+    }
+  }
+
   window.AnantaliaApi = Object.freeze({
     getPublicFleetCatalog,
     submitBookingRequest,
@@ -100,5 +114,6 @@
     getPublicContentBySlug,
     submitContactMessage,
     getPublicSiteConfig,
+    recordPageView,
   });
 })();

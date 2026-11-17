@@ -1,21 +1,32 @@
 (() => {
-  const officialWaBase = 'https://api.whatsapp.com/send/?phone=6281383333707';
-  document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach((link) => {
-    const rawHref = link.getAttribute('href') || '';
-    let textParam = '';
-    try {
-      const parsed = new URL(rawHref, window.location.origin);
-      textParam = parsed.searchParams.get('text') || '';
-    } catch {
-      textParam = '';
-    }
-    const queryText = textParam ? `&text=${encodeURIComponent(textParam)}` : '&text';
-    link.setAttribute('href', `${officialWaBase}${queryText}&type=phone_number&app_absent=0`);
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
-    link.hidden = false;
-    link.removeAttribute('aria-disabled');
-  });
+  const defaultWaPhone = '6281383333707';
+  const normalizeWaPhone = (raw) => {
+    const digits = String(raw || '').replace(/[^\d]/g, '');
+    if (digits.length < 8) return '';
+    return digits.startsWith('0') ? `62${digits.slice(1)}` : digits;
+  };
+  const applyWhatsAppNumberToDom = (phoneInput) => {
+    const waPhone = normalizeWaPhone(phoneInput) || window.__anantaliaWaPhone || defaultWaPhone;
+    window.__anantaliaWaPhone = waPhone;
+    const officialWaBase = `https://api.whatsapp.com/send/?phone=${waPhone}`;
+    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach((link) => {
+      const rawHref = link.getAttribute('href') || '';
+      let textParam = '';
+      try {
+        const parsed = new URL(rawHref, window.location.origin);
+        textParam = parsed.searchParams.get('text') || '';
+      } catch {
+        textParam = '';
+      }
+      const queryText = textParam ? `&text=${encodeURIComponent(textParam)}` : '&text';
+      link.setAttribute('href', `${officialWaBase}${queryText}&type=phone_number&app_absent=0`);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+      link.hidden = false;
+      link.removeAttribute('aria-disabled');
+    });
+  };
+  applyWhatsAppNumberToDom(defaultWaPhone);
 
   const scrollToTopButton = document.getElementById('scrollToTopBtn');
   if (scrollToTopButton) {
@@ -261,12 +272,7 @@
         document.title = cfg.websiteTitle;
       }
       if (cfg.whatsappNumber) {
-        const waDigits = String(cfg.whatsappNumber).replace(/[^\d]/g, '');
-        if (waDigits.length >= 8) {
-          document.querySelectorAll('a[href*="wa.me/"]').forEach((link) => {
-            link.href = link.href.replace(/https:\/\/wa\.me\/\d+/, `https://wa.me/${waDigits}`);
-          });
-        }
+        applyWhatsAppNumberToDom(cfg.whatsappNumber);
       }
       if (cfg.maintenanceMode === true && !document.getElementById('public-maintenance-banner')) {
         const banner = document.createElement('div');
@@ -281,10 +287,31 @@
     }
   };
 
+  const trackPublicPageView = () => {
+    if (!window.AnantaliaApi?.recordPageView) return;
+    const dnt = navigator.doNotTrack === '1' || window.doNotTrack === '1';
+    if (dnt) return;
+    let visitorToken = '';
+    try {
+      visitorToken = window.sessionStorage.getItem('anantalia_visitor_session') || '';
+      if (!visitorToken) {
+        visitorToken = typeof crypto?.randomUUID === 'function'
+          ? crypto.randomUUID()
+          : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+        window.sessionStorage.setItem('anantalia_visitor_session', visitorToken);
+      }
+    } catch {
+      visitorToken = '';
+    }
+    const pagePath = window.location?.pathname || '/';
+    void window.AnantaliaApi.recordPageView({ path: pagePath, visitorToken, dnt: false });
+  };
+
   const runPublicIntegrations = () => {
     void hydratePublicSiteConfig();
     void hydratePublicCmsContent();
     mountPublicContactForm();
+    trackPublicPageView();
   };
 
   if (document.readyState === 'loading') {

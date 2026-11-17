@@ -85,8 +85,9 @@
         showPhotoPlaceholder();
       }
 
+      const waPhone = window.__anantaliaWaPhone || '6281383333707';
       const waMessage = `Halo ANANTALIA TRANS, saya ingin berkonsultasi mengenai layanan ${serviceName}.`;
-      whatsapp.href = `https://api.whatsapp.com/send/?phone=6281383333707&text=${encodeURIComponent(waMessage)}&type=phone_number&app_absent=0`;
+      whatsapp.href = `https://api.whatsapp.com/send/?phone=${waPhone}&text=${encodeURIComponent(waMessage)}&type=phone_number&app_absent=0`;
       whatsapp.hidden = false;
       dialog.showModal();
     });
