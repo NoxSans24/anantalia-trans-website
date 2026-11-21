@@ -1,31 +1,65 @@
 (() => {
   const defaultWaPhone = '6281383333707';
+  const legacyPlaceholderPhones = new Set(['6281234567890', '081234567890']);
+
   const normalizeWaPhone = (raw) => {
     const digits = String(raw || '').replace(/[^\d]/g, '');
     if (digits.length < 8) return '';
-    return digits.startsWith('0') ? `62${digits.slice(1)}` : digits;
+    const normalized = digits.startsWith('0') ? `62${digits.slice(1)}` : digits;
+    if (legacyPlaceholderPhones.has(normalized)) return '';
+    return normalized;
   };
+
+  const getActiveWaPhone = () => normalizeWaPhone(window.__anantaliaWaPhone) || defaultWaPhone;
+
+  const buildWaUrl = (message = '') => {
+    const phone = getActiveWaPhone();
+    const trimmed = String(message || '').trim();
+    return trimmed
+      ? `https://wa.me/${phone}?text=${encodeURIComponent(trimmed)}`
+      : `https://wa.me/${phone}`;
+  };
+
+  const getDefaultWaMessage = (link) => {
+    const explicitMsg = link?.getAttribute('data-wa-message');
+    if (explicitMsg && explicitMsg.trim()) return explicitMsg.trim();
+    const context = (link?.getAttribute('data-wa-context') || '').toLowerCase();
+    const path = (window.location?.pathname || '').toLowerCase();
+    if (context === 'contact' || link?.closest('footer') || path.includes('pusat-bantuan')) {
+      return 'Halo Anatalia, saya ingin menghubungi layanan pelanggan.';
+    }
+    return 'Halo Anatalia, saya ingin mengetahui informasi layanan Anda.';
+  };
+
   const applyWhatsAppNumberToDom = (phoneInput) => {
-    const waPhone = normalizeWaPhone(phoneInput) || window.__anantaliaWaPhone || defaultWaPhone;
+    const waPhone = normalizeWaPhone(phoneInput) || getActiveWaPhone();
     window.__anantaliaWaPhone = waPhone;
-    const officialWaBase = `https://api.whatsapp.com/send/?phone=${waPhone}`;
     document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach((link) => {
       const rawHref = link.getAttribute('href') || '';
       let textParam = '';
       try {
         const parsed = new URL(rawHref, window.location.origin);
-        textParam = parsed.searchParams.get('text') || '';
+        textParam = (parsed.searchParams.get('text') || '').trim();
       } catch {
         textParam = '';
       }
-      const queryText = textParam ? `&text=${encodeURIComponent(textParam)}` : '&text';
-      link.setAttribute('href', `${officialWaBase}${queryText}&type=phone_number&app_absent=0`);
+      const message = textParam || getDefaultWaMessage(link);
+      link.setAttribute('href', buildWaUrl(message));
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
       link.hidden = false;
       link.removeAttribute('aria-disabled');
     });
   };
+
+  window.AnantaliaWhatsApp = Object.freeze({
+    defaultPhone: defaultWaPhone,
+    normalizePhone: normalizeWaPhone,
+    getPhone: getActiveWaPhone,
+    buildUrl: buildWaUrl,
+    syncDom: applyWhatsAppNumberToDom,
+  });
+
   applyWhatsAppNumberToDom(defaultWaPhone);
 
   const scrollToTopButton = document.getElementById('scrollToTopBtn');

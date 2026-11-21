@@ -85,9 +85,12 @@
         showPhotoPlaceholder();
       }
 
-      const waPhone = window.__anantaliaWaPhone || '6281383333707';
-      const waMessage = `Halo ANANTALIA TRANS, saya ingin berkonsultasi mengenai layanan ${serviceName}.`;
-      whatsapp.href = `https://api.whatsapp.com/send/?phone=${waPhone}&text=${encodeURIComponent(waMessage)}&type=phone_number&app_absent=0`;
+      const waMessage = `Halo Anatalia, saya ingin berkonsultasi mengenai layanan ${serviceName}.`;
+      whatsapp.href = window.AnantaliaWhatsApp?.buildUrl
+        ? window.AnantaliaWhatsApp.buildUrl(waMessage)
+        : `https://wa.me/${window.__anantaliaWaPhone || '6281383333707'}?text=${encodeURIComponent(waMessage)}`;
+      whatsapp.target = '_blank';
+      whatsapp.rel = 'noopener noreferrer';
       whatsapp.hidden = false;
       dialog.showModal();
     });

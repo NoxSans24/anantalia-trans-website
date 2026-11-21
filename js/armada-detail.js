@@ -56,20 +56,43 @@
     return match ? parseInt(match[0], 10) : 0;
   };
 
+  const formatRupiah = (amount) => {
+    const num = Number(amount);
+    if (!Number.isFinite(num) || num <= 0) return '';
+    return `Rp ${new Intl.NumberFormat('id-ID').format(Math.round(num))}`;
+  };
+
+  const formatRentalTypes = (types) => {
+    if (!Array.isArray(types) || !types.length) return '';
+    return types.map((t) => (t === 'self_drive' ? 'Lepas Kunci' : t === 'with_driver' ? 'Dengan Pengemudi' : t)).join(' · ');
+  };
+
+  const buildWaUrl = (message) => {
+    if (window.AnantaliaWhatsApp?.buildUrl) {
+      return window.AnantaliaWhatsApp.buildUrl(message);
+    }
+    const waPhone = window.__anantaliaWaPhone || '6281383333707';
+    return `https://wa.me/${waPhone}?text=${encodeURIComponent(message)}`;
+  };
+
   const buildCard = (record) => {
     const card = make('article', 'fleet-item fleet-catalogue-card bg-surface-card rounded-2xl shadow-sm border border-border-subtle/60 overflow-hidden group card-visible');
     card.dataset.vehicleId = record.id;
     card.dataset.cat = record.category;
-    card.dataset.model = `${record.name} ${record.category}`;
+    card.dataset.model = `${record.name} ${record.category} ${record.description || ''}`;
     for (const [key, value] of Object.entries({
-      category: record.category, capacity: record.capacity,
+      category: record.category,
+      capacity: record.capacity,
+      transmission: record.transmission,
     })) {
-      if (value !== undefined && value !== null) card.dataset[key] = Array.isArray(value) ? value.join(' · ') : String(value);
+      if (value !== undefined && value !== null && value !== '') {
+        card.dataset[key] = Array.isArray(value) ? value.join(' · ') : String(value);
+      }
     }
     const imageWrap = make('div', 'fleet-card-image-wrap');
     const image = make('img', 'fleet-card-image');
     image.src = record.image || '../assets/placeholder-vehicle.svg';
-    image.alt = record.imageAlt || `Ilustrasi kendaraan ${record.name}`;
+    image.alt = record.imageAlt || `Foto kendaraan ${record.name}`;
     image.loading = 'lazy';
     image.addEventListener('error', () => {
       if (!image.src.endsWith('/assets/placeholder-vehicle.svg')) {
@@ -80,6 +103,14 @@
     imageWrap.append(image);
     const content = make('div', 'fleet-card-content');
     content.append(make('h2', 'fleet-card-name', record.name));
+    if (record.startingPrice) {
+      const priceBlock = make('div', 'fleet-card-price-block');
+      priceBlock.append(
+        make('span', 'fleet-card-price-label', record.capacity || record.category || 'Tarif mulai'),
+        make('span', 'fleet-card-price', `Mulai ${formatRupiah(record.startingPrice)}/hari`)
+      );
+      content.append(priceBlock);
+    }
     const button = make('button', 'toggle-detail-btn');
     button.type = 'button';
     button.setAttribute('aria-haspopup', 'dialog');
@@ -96,7 +127,12 @@
   };
 
   const renderFilters = () => {
-    transmissionFilter.closest('label')?.setAttribute('hidden', '');
+    const hasTransmissionData = records.some((record) => Boolean(record.transmission));
+    if (hasTransmissionData) {
+      transmissionFilter.closest('label')?.removeAttribute('hidden');
+    } else {
+      transmissionFilter.closest('label')?.setAttribute('hidden', '');
+    }
     const all = make('button', `category-filter-btn px-4 py-1.5 rounded-full font-label-sm text-label-sm transition-all duration-200 ${categoryActive.join(' ')} active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/30`, 'Semua');
     all.type = 'button'; all.dataset.category = 'all'; all.setAttribute('role', 'tab'); all.setAttribute('aria-selected', 'true');
     filterList.replaceChildren(all);
@@ -264,7 +300,11 @@
   const detailFields = [
     ['Kategori', 'category', 'category'],
     ['Kapasitas tempat duduk', 'capacity', 'groups'],
-    ['Jenis sewa terverifikasi', 'rentalTypes', 'key'],
+    ['Jenis sewa terverifikasi', 'rentalTypesLabel', 'key'],
+    ['Transmisi', 'transmission', 'settings'],
+    ['Bahan bakar', 'fuel', 'local_gas_station'],
+    ['Tarif mulai', 'startingPriceLabel', 'payments'],
+    ['Fasilitas', 'featuresLabel', 'check_circle'],
   ];
   const categoryIcons = { 'City Car / EV': 'electric_car', 'MPV Standar': 'airport_shuttle', 'MPV Keluarga': 'family_restroom', Premium: 'directions_car', Minibus: 'airport_shuttle', 'Bus Medium': 'directions_bus', 'Bus Besar': 'directions_bus' };
 
@@ -412,7 +452,14 @@
     const successTitle = make('h3', 'vehicle-booking-success-title', 'Permintaan terkirim');
     const successCode = make('p', 'vehicle-booking-success-code');
     const successNote = make('p', 'vehicle-booking-success-note', 'Tim kami akan meninjau permintaan dan menghubungi Anda.');
-    successPanel.append(successIcon, successTitle, successCode, successNote);
+    const successWaLink = make('a', 'vehicle-modal-whatsapp');
+    successWaLink.target = '_blank';
+    successWaLink.rel = 'noopener noreferrer';
+    successWaLink.hidden = true;
+    const successWaIcon = make('span', 'material-symbols-outlined', 'chat');
+    successWaIcon.setAttribute('aria-hidden', 'true');
+    successWaLink.append(successWaIcon, make('span', '', 'Konfirmasi Pemesanan via WhatsApp'));
+    successPanel.append(successIcon, successTitle, successCode, successNote, successWaLink);
     section.append(successPanel);
 
     // Form validation helper
@@ -487,8 +534,15 @@
         };
         const result = await window.AnantaliaApi.submitBookingRequest(payload);
         form.hidden = true;
-        successCode.textContent = `Kode permintaan Anda: ${result?.bookingCode ?? '—'}`;
+        const code = result?.bookingCode ?? '';
+        successCode.textContent = `Kode permintaan Anda: ${code || '—'}`;
         successNote.textContent = result?.notice || 'Permintaan tersimpan dan menunggu konfirmasi admin.';
+        const modelLabel = activeRecord?.name || 'armada pilihan';
+        const bookingWaMsg = code
+          ? `Halo Anatalia, saya ingin bertanya mengenai pemesanan mobil ${modelLabel} (Kode: ${code}).`
+          : `Halo Anatalia, saya ingin bertanya mengenai pemesanan mobil ${modelLabel}.`;
+        successWaLink.href = buildWaUrl(bookingWaMsg);
+        successWaLink.hidden = false;
         successPanel.hidden = false;
       } catch (error) {
         formStatus.textContent = error.message || 'Permintaan gagal dikirim. Coba lagi.';
@@ -555,12 +609,22 @@
     if (actionsBar) actionsBar.hidden = false;
 
     title.textContent = record.name;
-    description.textContent = 'Model ini diverifikasi untuk katalog publik. Informasi ini tidak menyatakan unit tersedia atau tarif sewa.';
+    description.textContent = record.description || 'Model armada terverifikasi di katalog Anatalia Trans. Hubungi tim kami untuk konfirmasi jadwal dan ketersediaan unit.';
     descriptionIcon.textContent = categoryIcons[record.category] || 'info';
-    status.textContent = 'Data model terverifikasi dari server';
+    status.textContent = record.availabilityStatus === 'available'
+      ? `Tersedia (${record.availableUnits} unit siap)`
+      : record.availabilityStatus === 'in_use'
+        ? 'Unit sedang digunakan — konfirmasi jadwal via WhatsApp'
+        : 'Data model terverifikasi dari server';
+    const enrichedRecord = {
+      ...record,
+      rentalTypesLabel: formatRentalTypes(record.rentalTypes),
+      startingPriceLabel: record.startingPrice ? `Mulai ${formatRupiah(record.startingPrice)}/hari` : '',
+      featuresLabel: Array.isArray(record.features) && record.features.length ? record.features.join(' · ') : '',
+    };
     specs.replaceChildren();
     detailFields.forEach(([label, key, iconName]) => {
-      let value = record[key];
+      let value = enrichedRecord[key];
       if (Array.isArray(value)) value = value.join(' · ');
       if (!value) return;
       const item = make('li');
@@ -570,15 +634,20 @@
     });
     sources.replaceChildren();
     sources.hidden = true;
-    image.hidden = false; placeholder.hidden = true; image.removeAttribute('src');
-    image.src = record.image || '../assets/placeholder-vehicle.svg';
-    image.alt = record.imageAlt || `Ilustrasi kendaraan ${record.name}`;
     const showPlaceholder = () => { image.hidden = true; placeholder.hidden = false; };
     image.onerror = showPlaceholder;
+    if (record.image) {
+      image.hidden = false;
+      placeholder.hidden = true;
+      image.src = record.image;
+      image.alt = record.imageAlt || `Foto kendaraan ${record.name}`;
+    } else {
+      image.removeAttribute('src');
+      showPlaceholder();
+    }
     if (whatsapp) {
-      const waPhone = window.__anantaliaWaPhone || '6281383333707';
-      const waMsg = `Halo ANANTALIA TRANS, saya ingin menanyakan ketersediaan dan informasi sewa unit ${record.name} (${record.category}).`;
-      whatsapp.href = `https://api.whatsapp.com/send/?phone=${waPhone}&text=${encodeURIComponent(waMsg)}&type=phone_number&app_absent=0`;
+      const waMsg = `Halo Anatalia, saya ingin bertanya mengenai mobil ${record.name}.`;
+      whatsapp.href = buildWaUrl(waMsg);
       whatsapp.target = '_blank';
       whatsapp.rel = 'noopener noreferrer';
       whatsapp.hidden = false;
@@ -611,11 +680,12 @@
     dialog.classList.remove('is-closing');
   });
 
-  const applyUrlQueryParams = () => {
+  const applyUrlQueryParams = async () => {
     const params = new URLSearchParams(window.location.search);
     const paramQ = params.get('q');
     const paramCategory = params.get('category');
     const paramCapacity = params.get('capacity');
+    const paramModel = params.get('model');
     if (paramQ) {
       search.value = paramQ.trim();
       query = search.value.toLocaleLowerCase('id');
@@ -629,10 +699,25 @@
         .find(btn => btn.dataset.category?.toLocaleLowerCase('id') === paramCategory.toLocaleLowerCase('id'));
       if (matchingBtn) {
         activateCategory(matchingBtn.dataset.category);
-        return;
+      } else {
+        update();
       }
+    } else {
+      update();
     }
-    update();
+
+    if (paramModel) {
+      const needle = paramModel.trim().toLowerCase();
+      let match = records.find((item) => item.slug?.toLowerCase() === needle || item.id?.toLowerCase() === needle);
+      if (!match && window.AnantaliaApi?.getPublicFleetModelDetail) {
+        try {
+          match = await window.AnantaliaApi.getPublicFleetModelDetail(paramModel.trim());
+        } catch {
+          match = null;
+        }
+      }
+      if (match) openDetails(match);
+    }
   };
 
   // Optional capacity guide quick-filter buttons
@@ -648,9 +733,11 @@
   window.AnantaliaApi.getPublicFleetCatalog()
     .then(items => {
       records = items;
+      const headerCount = document.getElementById('fleet-header-count');
+      if (headerCount) headerCount.textContent = `${records.length} model`;
       renderFilters();
       grid.replaceChildren(...records.map(buildCard));
-      applyUrlQueryParams();
+      void applyUrlQueryParams();
     })
     .catch(error => {
       console.error('Katalog armada gagal dimuat:', error);
